@@ -5,13 +5,23 @@ namespace TestProgram;
 public class UnitTest
 {
     [Fact]
-    public void Test1() {
+    public void MethodName_ScenarioUnderBeingTested_ExpectedBehavior() {
+        //Arrange
         var program = new Program();
+                
+        //Act
+        
+        //Asset
     }
     
     [Theory]
     [InlineData()]
-    public void Test2() {
+    public void MethodName_ScenarioUnderBeingTested_ExpectedBehavior2() {
+        //Arrange
         var program = new Program();
+        
+        //Act
+        
+        //Asset
     }
 }
