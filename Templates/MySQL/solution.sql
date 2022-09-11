@@ -5,3 +5,4 @@
 
 
 -- Remove Data
+DROP TABLE _TABLE_NAME_;
