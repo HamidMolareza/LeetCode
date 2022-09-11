@@ -70,8 +70,8 @@ wait
 #Create README file for question text
 questionText="$resultDir/README.md"
 if [ ! -f "$questionText" ]; then
-  echo 'Copy the question text here.' >"$resultDir"
-  echo "Please copy the question text to $resultDir"
+  echo 'Copy the question text here.' >"$questionText"
+  echo "Please copy the question text to $questionText"
 fi
 
 echo "Directory is ready: $resultDir"
