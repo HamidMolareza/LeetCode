@@ -40,16 +40,15 @@ if [ ! -d "$solutionsDir" ]; then
   exit 1
 fi
 
-mysqlTemplateDir="$3"
-if [ -z "$mysqlTemplateDir" ]; then
-  mysqlTemplateDir="MySQL"
-  if [ ! -d "$mysqlTemplateDir" ]; then
-    printf "MySQL template directory: "
-    read -r mysqlTemplateDir
+templateDir="$3"
+if [ -z "$templateDir" ]; then
+  if [ ! -d "$templateDir" ]; then
+    printf "template directory: "
+    read -r templateDir
   fi
 fi
-if [ ! -d "$mysqlTemplateDir" ]; then
-  echo "Error! Can not find web template dir in $mysqlTemplateDir"
+if [ ! -d "$templateDir" ]; then
+  echo "Error! Can not find template dir in $templateDir"
   exit 1
 fi
 #===========================================================
@@ -63,8 +62,8 @@ create_dir_if_is_not_exist "$solutionsDir/$problemName"
 
 #copy template to solution dir
 resultDir="$solutionsDir/$problemName"
-cp -r "$mysqlTemplateDir" "$resultDir"
-exit_if_operation_failed "$?" "Can not copy template from $mysqlTemplateDir to $resultDir"
+cp -r "$templateDir" "$resultDir"
+exit_if_operation_failed "$?" "Can not copy template from $templateDir to $resultDir"
 wait
 
 #Create README file for question text
