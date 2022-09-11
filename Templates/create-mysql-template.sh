@@ -67,8 +67,8 @@ cp -r "$mysqlTemplateDir" "$resultDir"
 exit_if_operation_failed "$?" "Can not copy template from $mysqlTemplateDir to $resultDir"
 wait
 
-#Create readme file for question text
-questionText="$resultDir/question.md"
+#Create README file for question text
+questionText="$resultDir/README.md"
 if [ ! -f "$questionText" ]; then
   echo 'Copy the question text here.' >"$resultDir"
   echo "Please copy the question text to $resultDir"
