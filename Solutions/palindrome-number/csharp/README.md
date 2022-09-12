@@ -4,6 +4,14 @@ This solution has scored 100 in [LeetCode](https://leetcode.com).
 
 🌟 If you like this solution, please give it a star.
 
+### Solution1 - Using ToString()
+
+This is a simple and fast algorithm.
+
+### Solution2 - Using Mathematical Operations
+
+It calculates the inverse number by mathematical operations, which may be interesting, but it is slower than the first algorithm.
+
 ## Support
 
 Reach out to the maintainer at one of the following places:

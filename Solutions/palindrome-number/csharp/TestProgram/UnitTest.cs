@@ -10,9 +10,11 @@ public class UnitTest {
     public void IsPalindrome_ValidInput_ReturnTrue(int number) {
         var program = new Program();
 
-        var isPalindrome = program.IsPalindrome(number);
+        var isPalindrome = program.Program_ConvertToString(number);
+        var isPalindrome2 = program.IsPalindrome_WithoutConvertToString(number);
 
         Assert.True(isPalindrome);
+        Assert.True(isPalindrome2);
     }
 
     [Theory]
@@ -22,8 +24,10 @@ public class UnitTest {
     public void IsPalindrome_InValidInput_ReturnFalse(int number) {
         var program = new Program();
 
-        var isPalindrome = program.IsPalindrome(number);
+        var isPalindrome = program.Program_ConvertToString(number);
+        var isPalindrome2 = program.IsPalindrome_WithoutConvertToString(number);
 
         Assert.False(isPalindrome);
+        Assert.False(isPalindrome2);
     }
 }

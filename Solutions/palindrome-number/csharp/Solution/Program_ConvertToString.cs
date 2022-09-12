@@ -1,7 +1,7 @@
 ﻿namespace Solution;
 
-public class Program {
-    public bool IsPalindrome(int x) {
+public partial class Program {
+    public bool Program_ConvertToString(int x) {
         if (x < 0)
             return false;
 
