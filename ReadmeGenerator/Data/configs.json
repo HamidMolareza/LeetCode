@@ -1,0 +1,7 @@
+{
+  "LeetCodeProblemFormat":  "https://leetcode.com/problems/{0}",
+  "SolutionUrlFormat": "https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/{0}",
+  "ReadmeFileName": "README.md",
+  "ReadmeTemplateName": "Data/ReadmeTemplate.md",
+  "NumOfTry": 2
+}
