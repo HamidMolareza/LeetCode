@@ -4,7 +4,7 @@ using OnRail;
 using OnRail.Extensions.Try;
 using OnRail.ResultDetails.Errors;
 
-namespace Quera {
+namespace LeetCode {
     public class Arguments {
         public string ProgramDirectory { get; set; }
         public string OutputDirectory { get; set; }

@@ -1,215 +1,127 @@
-<h1 align="center">
-  <a href="">
-    <img src="" alt="Logo" width="100" height="100">
-  </a>
-</h1>
+# LeetCode Problems
 
-<div align="center">
-  PROJECT_NAME
-  <br />
-  <a href="#getting-started"><strong>Getting Started »</strong></a>
-  <br />
-  <br />
-  <a href="https://github.com/GITHUB_USERNAME/REPO_SLUG/issues/new?assignees=&labels=bug&template=01_BUG_REPORT.md&title=bug%3A+">Report a Bug</a>
-  ·
-  <a href="https://github.com/GITHUB_USERNAME/REPO_SLUG/issues/new?assignees=&labels=enhancement&template=02_FEATURE_REQUEST.md&title=feat%3A+">Request a Feature</a>
-  .
-  <a href="https://github.com/GITHUB_USERNAME/REPO_SLUG/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">Ask a Question</a>
-</div>
+<a href="https://github.com/HamidMolareza/LeetCode/issues/new?assignees=&labels=help%20wanted&template=02_SOLVE_REQUEST.md&title=solve%20request%3A+">
+Request to solve a new question</a> -
+<a href="https://github.com/HamidMolareza/LeetCode/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">
+Ask a Question</a>
 
-<div align="center">
-<br />
-
-![GitHub](https://img.shields.io/github/license/User/Repo)
-
-[![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
-[![code with love by GITHUB_USERNAME](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-GITHUB_USERNAME-ff1414.svg?style=flat-square)](https://github.com/GITHUB_USERNAME)
-
-</div>
-
-<details>
-<summary>Table of Contents</summary>
-
-- [About](#about)
-  - [Demo](#demo)
-  - [Built With](#built-with)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-  - [Documentation](#documentation)
-- [Known issues](#known-issues)
-- [CHANGELOG](#changelog)
-- [Features](#features)
-- [Roadmap](#roadmap)
-- [Support](#support)
-- [Used By](#used-by)
-- [FAQ](#faq)
-- [Project assistance](#project-assistance)
-- [Contributing](#contributing)
-- [Authors & contributors](#authors--contributors)
-- [Security](#security)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-- [Related](#related)
-
-</details>
+![GitHub](https://img.shields.io/github/license/HamidMolareza/LeetCode)
+[![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/HamidMolareza/LeetCode/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
 
 ## About
 
-> **[?]**
-> Provide general information about your project here.
-> Put a meaningful, short, plain-language description of:
-> What problem does it (intend to) solve?
-> What is the purpose of your project?
-> What this project is trying to accomplish and why it matters?
-> Why did you undertake it?
-> Describe the problem(s) this project solves.
-> Describe how this software can improve the lives of its audience.
-> Describe what sets this apart from related-projects.
-> You don't have to answer all the questions -- just the ones relevant to your project.
+The solutions to some [LeetCode](https://leetcode.com) problems.
 
+All the solutions that are here, get full score (100) in LeetCode. But that does not necessarily mean the best answer.
 
-### Demo
-**Screenshot**: If the software has visual components, place a screenshot after the description; e.g.,
+🌟 If you like this project, please give it a star.
 
-<details>
-<summary>Screenshots</summary>
-<br>
+In [this section](#list-of-problems-solutions) you can see the solutions, And if you want, you
+can [send your solution](#contributing) (in any language).
 
-> **[?]**
-> Please provide your screenshots here.
+## List of problems-solutions
 
-|                               Home Page                               |                               Login Page                               |
-| :-------------------------------------------------------------------: | :--------------------------------------------------------------------: |
-| <img src="docs/images/screenshot.png" title="Home Page" width="100%"> | <img src="docs/images/screenshot.png" title="Login Page" width="100%"> |
+Number of problems solved: 6
 
-</details>
-
-### Built With
-
-> **[?]**
-> Please provide the technologies that are used in the project.
-
-**Client:** React, Redux, TailwindCSS
-
-**Server:** Node, Express
-
-
-## Getting Started
-
-### Prerequisites
-
-> **[?]**
-> What are the project requirements/dependencies?
-> Describe any dependencies that must be installed for this software to work.
-This includes programming languages, databases or other storage mechanisms, build tools, frameworks, and so forth.
-If specific versions of other software are required, or known not to work, call that out.
-
-### Installation
-
-> **[?]**
-> Describe how to install and get started with the project.
-> Detailed instructions on how to install, configure, and get the project running.
-This should be frequently tested to ensure reliability. Alternatively, link to
-a separate [INSTALL](INSTALL.md) document.
+| Problem | Solutions | Last commit |
+| ----- | ----- | ----- |
+| [merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-two-sorted-lists/csharp) | 12-09-2022 |
+| [palindrome-number](https://leetcode.com/problems/palindrome-number) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp) | 12-09-2022 |
+| [two-sum](https://leetcode.com/problems/two-sum) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp) | 12-09-2022 |
+| [combine-two-tables](https://leetcode.com/problems/combine-two-tables) | [MySQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/MySQL) | 11-09-2022 |
+| [employees-earning-more-than-their-managers](https://leetcode.com/problems/employees-earning-more-than-their-managers) | [MySQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/MySQL) | 11-09-2022 |
+| [duplicate-emails](https://leetcode.com/problems/duplicate-emails) | [MySQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/duplicate-emails/MySQL) | 11-09-2022 |
 
 
 ## Usage
 
-> **[?]**
-> How does one go about using it?
-> Provide various use cases and code examples here.
+All solutions are in the [Solutions](Solutions) folder.
 
-```javascript
-import Component from 'my-project'
+In LeetCode, the structure of the problem link is as follows: https://leetcode.com/problems/{Problem-Name}
 
-function App() {
-  return <Component />
-}
-```
+We keep all problem solutions in a folder called `Problem-Name`. For example, the solutions
+to [this problem](https://leetcode.com/problems/two-sum/) with name `two-sum` are located in folder `two-sum`
+inside [Solutions](Solutions/two-sum) folder.
 
-### Documentation
+Every problem can be solved with different languages. For example, `C#`, `Python`, etc. To separate the languages, we
+save each language in a folder with its own name. For example, for `C#`, the solution is placed in a folder
+called `csharp`.
 
-[Documentation](https://linktodocumentation)
+For example, the tree structure of a solutions can look like this:
 
+- Solutions
+    - [two-sum](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum)
+        - README.md (the question text)
+        - csharp
+          - Solution
+            - program.cs
+          - Test
+          - README (about solutions)
+        - python
+          - program.py
+    - [combine-two-tables](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/MySQL)
+      - README.md (the question text)
+      - MySQL
+        - solution.sql
+        - README.md (about solution)
+
+For see default templates, you can see [this section](Templates).
 
 ## Known issues
 
-Document any known significant shortcomings with the software.
-
-## CHANGELOG
-
-
-## Features
-
-- 
-- 
+Please see [this list](https://github.com/HamidMolareza/LeetCode/issues) and help if you can.
 
 ## Roadmap
 
-See the [open issues](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/HamidMolareza/LeetCode/issues) for a list of proposed features (and known
+issues).
 
-- [Top Feature Requests](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues?q=label%3Aenhancement+is%3Aopen+sort%3Areactions-%2B1-desc) (Add your votes using the 👍 reaction)
-- [Top Bugs](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues?q=is%3Aissue+is%3Aopen+label%3Abug+sort%3Areactions-%2B1-desc) (Add your votes using the 👍 reaction)
-- [Newest Bugs](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+- [Top Question Requests](https://github.com/HamidMolareza/LeetCode/issues?q=label%3Aenhancement+is%3Aopen+sort%3Areactions-%2B1-desc) (
+  Add your votes using the 👍 reaction)
 
 ## Support
 
-> **[?]**
-> Provide additional ways to contact the project maintainer/maintainers.
-
 Reach out to the maintainer at one of the following places:
 
-- [GitHub issues](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+)
-- Contact options listed on [this GitHub profile](https://github.com/GITHUB_USERNAME)
+- [GitHub issues](https://github.com/HamidMolareza/LeetCode/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+)
 
-## Used By
+## Features
 
-This project is used by the following companies:
-
-- Company 1
-- Company 2
-
-## FAQ
-
-#### Question 1
-
-Answer 1
-
-#### Question 2
-
-Answer 2
-
-
-## Project assistance
-
-If you want to say **thank you** or/and support active development of PROJECT_NAME:
-
-- Add a [GitHub Star](https://github.com/GITHUB_USERNAME/REPO_SLUG) to the project.
-- Tweet about the PROJECT_NAME.
-- Write interesting articles about the project on [Dev.to](https://dev.to/), [Medium](https://medium.com/) or your personal blog.
-
-Together, we can make PROJECT_NAME **better**!
+- Automatic readme generation
+- Clean code
+- Documentation
+- Our structure support multi-language
+- CI/CD with GitHub action
 
 ## Contributing
 
-First off, thanks for taking the time to contribute! Contributions are what make the free/open-source community such an amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly appreciated**.
+First off, thanks for taking the time to contribute! Contributions make the free/open-source community such an
+amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly
+appreciated**.
 
 Please read [our contribution guidelines](docs/CONTRIBUTING.md), and thank you for being involved!
 
 ## Authors & contributors
 
-The original setup of this repository is by [FULL_NAME](https://github.com/GITHUB_USERNAME).
+The original setup of this repository is by [Hamid Molareza](https://github.com/HamidMolareza).
 
-For a full list of all authors and contributors, see [the contributors page](https://github.com/GITHUB_USERNAME/REPO_SLUG/contributors).
+## About Readme.md
 
-## Security
+This file is generated [automatically](.github/workflows/update-readme.yml). You can see the source of this program in
+the [Readme Generator](ReadmeGenerator) directory.
 
-PROJECT_NAME follows good practices of security, but 100% security cannot be assured.
-PROJECT_NAME is provided **"as is"** without any **warranty**.
+This project uses [the Payadel README template](https://github.com/Payadel/Readme/).
 
-_For more information and to report security issues, please refer to our [security documentation](docs/SECURITY.md)._
+### Why readme is auto-generated?
+
+I didn't want to manually update the table in this file every time a problem was solved. This is repetitive work and
+programmers hate repetitive work!
+
+### How does readme generated?
+
+In summary, the list of problems and solutions is read from the [Solutions](Solutions) folder, and the processed
+information is placed in [this format](ReadmeGenerator/Data/ReadmeTemplate.md).
+For more information please see [Readme Generator](ReadmeGenerator).
 
 ## License
 
@@ -217,17 +129,8 @@ This project is licensed under the **GPLv3**.
 
 See [LICENSE](LICENSE) for more information.
 
-## Acknowledgements
-
-> **[?]**
-> If your work was funded by any organization or institution, acknowledge their support here.
-> In addition, if your work relies on other software libraries, or was inspired by looking at other work, it is appropriate to acknowledge this intellectual debt too.
-
-
 ## Related
 
-Here are some related projects
+[//]: # (Here are some related projects:)
 
-[Awesome README](https://github.com/matiassingers/awesome-readme)
-
-
+> If you want your repository to be added, send me the link in the issues.

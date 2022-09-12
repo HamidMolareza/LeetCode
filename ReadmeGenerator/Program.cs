@@ -7,6 +7,8 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using CliWrap;
 using CliWrap.Buffered;
+using LeetCode.ErrorDetails;
+using LeetCode.Models;
 using OnRail;
 using OnRail.Extensions.Map;
 using OnRail.Extensions.OnFail;
@@ -14,10 +16,8 @@ using OnRail.Extensions.OnSuccess;
 using OnRail.Extensions.SelectResults;
 using OnRail.Extensions.ThrowException;
 using OnRail.Extensions.Try;
-using Quera.ErrorDetails;
-using Quera.Models;
 
-namespace Quera {
+namespace LeetCode {
     public static class Program {
         private static Configs _configs;
         private static Arguments _arguments;
@@ -155,7 +155,7 @@ namespace Quera {
                 });
 
         private static Task<Result<DateTime>> GetLastCommitDateAsync(string path) =>
-            TryExtensions.Try(async () => await (Cli.Wrap("git").WithArguments($"log -1 --date=iso {path}")
+            TryExtensions.Try(async () => await (Cli.Wrap("git").WithArguments($"log -1 --date=iso \"{path}\"")
                                                  | Cli.Wrap("grep").WithArguments("^Date"))
                     .ExecuteBufferedAsync())
                 .OnSuccess(cmd => {

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Quera.Models {
+namespace LeetCode.Models {
     public class Problem {
         public string Name { get; set; }
 

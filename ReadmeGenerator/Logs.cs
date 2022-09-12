@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using OnRail.ResultDetails;
 
-namespace Quera {
+namespace LeetCode {
     public static class Logs {
         public static void Log(this ResultDetail resultDetail) {
             Console.WriteLine(resultDetail.GetHeaderOfError());

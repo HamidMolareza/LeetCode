@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace Quera {
+namespace LeetCode {
     public class Configs {
         public const string DataDirectory = "Data";
         public static readonly string ConfigFile = Path.Combine(DataDirectory, "configs.json");
