@@ -1,16 +1,14 @@
 ---
-name: Bug Report
-about: Create a report to help PROJECT_NAME to improve
-title: "bug: "
+name: Bug Report about: Create a report to help LeetCodeProblems to improve title: "bug: "
 labels: "bug"
 assignees: ""
 ---
 
 # Bug Report
 
-**PROJECT_NAME version:**
+**LeetCode problem name:**
 
-<!-- Please specify commit or tag version. -->
+<!-- For example LeetCode problem name in https://leetcode.com/problems/two-sum/ is `two-sum`. also we solve this problem in branch with name `two-sum`. -->
 
 **Current behavior:**
 
@@ -22,7 +20,7 @@ assignees: ""
 
 **Steps to reproduce:**
 
-<!-- Explain the steps required to duplicate the issue, especially if you are able to provide a sample application. -->
+<!-- Explain the steps required to duplicate the issue, especially if you are able to provide a sample input. -->
 
 **Related code:**
 

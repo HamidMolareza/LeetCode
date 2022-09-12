@@ -1,57 +1,69 @@
 # Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
-Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in all your interactions with the project.
+When contributing to this repository, please first discuss the change you wish to make via **issue**, email, or any
+other method with the owners of this repository before making a change. Please note we have
+a [code of conduct](CODE_OF_CONDUCT.md), please follow it in all your interactions with the project.
+
+## Readme File
+
+The readme file is generated **automatically**. So do not change this file directly. To apply the format changes, update
+the [readme template](https://github.com/HamidMolareza/LeetCode/blob/master/ReadmeGenerator/Data/ReadmeTemplate.md)
+and send PR.
 
 ## Development environment setup
 
-> **[?]**
-> Proceed to describe how to setup local development environment.
-> e.g:
+If we want to solve a problem with name [two-sum](https://leetcode.com/problems/two-sum/) with any languages, the base structure
+is as follows:
 
-To set up a development environment, please follow these steps:
+- Solutions
+    - [two-sum](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum)
+        - README (Problem text)
+        - LanguageName1
+        - LanguageName2
 
-1. Clone the repo
+**Important:** Every problem must have a readme file for problem text. If is not exist, create this file and copy text
+of LeetCode problem to that file. And if is exist, please don't change it.
 
-   ```sh
-   git clone https://github.com/GITHUB_USERNAME/REPO_SLUG
-   ```
-   
-2. To run this project, you will need to add the following environment variables to your .env file
+## Do you want to improve the solution? Refactor the code?
 
-`API_KEY`
+According to [the mentioned structure](#development-environment-setup), update the codes or documents and send PR.
 
-`ANOTHER_API_KEY`
+## A problem has been solved, but do you want to provide another solution?
 
-3. TODO
+All the solutions of a language must be placed in a folder called the same language (for example, `csharp`). If you are
+not using a new language, do not create a new folder. Use another source file to the previous sources and preferably
+update the readme file of the problem.
 
-4. Running Tests.
-To run tests, run the following command
+For example, two solutions are used
+in [this problem](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp):
 
-```bash
-  npm run test
-```
+- program.cs
+- program2.cs
 
-## Issues and feature requests
+## The problem is solved, but do you have a solution with a new language?
 
-You've found a bug in the source code, a mistake in the documentation or maybe you'd like a new feature? You can help us by [submitting an issue on GitHub](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues). Before you create an issue, make sure to search the issue archive -- your issue may have already been addressed!
+According to [the mentioned structure](#development-environment-setup), create a folder called the desired language and
+put your codes. You can also use
+the [default templates](https://github.com/HamidMolareza/LeetCode/tree/master/Templates).
 
-Please try to create bug reports that are:
+## Do you want to solve a new problem?
 
-- _Reproducible._ Include steps to reproduce the problem.
-- _Specific._ Include as much detail as possible: which version, what environment, etc.
-- _Unique._ Do not duplicate existing opened issues.
-- _Scoped to a Single Bug._ One bug per report.
+According to [the mentioned structure](#development-environment-setup):
 
-**Even better: Submit a pull request with a fix or new feature!**
+- create a folder named `LeetCode-problem-name`
+  in [Solutions](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions) folder.
+- Create a folder in it called the desired language (like `csharp`, `python`, `react`, etc).
+- Put your solution there.
 
-### How to submit a Pull Request
+You can also use the [default templates](https://github.com/HamidMolareza/LeetCode/tree/master/Templates).
 
-1. Search our repository for open or closed
-   [Pull Requests](https://github.com/GITHUB_USERNAME/REPO_SLUG/pulls)
-   that relate to your submission. You don't want to duplicate effort.
-2. Fork the project
-3. Create your feature branch (`git checkout -b feat/amazing_feature`)
-4. Commit your changes (`git commit -m 'feat: add amazing_feature'`) PROJECT_NAME uses [conventional commits](https://www.conventionalcommits.org), so please follow the specification in your commit messages.
-5. Push to the branch (`git push origin feat/amazing_feature`)
-6. Open a Pull Request
+**Important:** The auto readme generator uses **the problem folder name** to generate a problem link to LeetCode site.
+So it is important that use the correct name:
+
+For example problem name in https://leetcode.com/problems/two-sum/ is `two-sum`.
+
+## Issues and question requests
+
+Do you want a solution to a new problem, do you know a better solution or did you find a problem? You can help us
+by [submitting an issue on GitHub](https://github.com/HamidMolareza/LeetCode/issues). Before you create an issue, make
+sure to search the issue archive -- your issue may have already been addressed!
