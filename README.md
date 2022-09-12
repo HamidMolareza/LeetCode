@@ -131,6 +131,7 @@ See [LICENSE](LICENSE) for more information.
 
 ## Related
 
-[//]: # (Here are some related projects:)
+- Are you you interested in [Quera](quera.org) site problems? Please see [this repository](https://github.com/HamidMolareza/QueraProblems).
+
 
 > If you want your repository to be added, send me the link in the issues.
