@@ -25,8 +25,11 @@ This program uses a **memory** database by default. If you want, use another dat
 ### How Change Database
 
 1. Open the [AppSettings file](AppSettings.json). (this is a json file)
+
 2. Change `DatabaseType` key to desired database (look [Supported Databases](#supported-databases))
+
 3. Update `ConnectionString` key
+
 4. Run your database service or Use docker compose files in [Docker-Compose directory](Docker-Compose)
 
 ### Example for postgres database
@@ -38,7 +41,9 @@ This program uses a **memory** database by default. If you want, use another dat
   "ConnectionString": "Host=localhost;Port=35000;Username=postgres;Password=postgres;Database=LeetCode"
 }
 ```
+
 2. `docker-compose -f Docker-Compose/postgres.yml up`
+
 3. [Run program](#how-run)
 
 > Note: If necessary, you can change the desired docker-compose file information. For example, port 35000 is used by default, which you can change to another number.

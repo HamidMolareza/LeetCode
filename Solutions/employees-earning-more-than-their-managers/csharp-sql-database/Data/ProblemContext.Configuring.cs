@@ -17,6 +17,8 @@ public partial class ProblemContext : DbContext {
             case "mysql":
                 options.UseMySQL(AppSettings.ConnectionString);
                 break;
+            default:
+                throw new ArgumentOutOfRangeException($"This database is not supported.");
         }
     }
 
