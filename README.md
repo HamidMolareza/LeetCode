@@ -23,13 +23,15 @@ can [send your solution](#contributing) (in any language).
 
 Number of problems solved: 6
 
+Number of solutions: 7
+
 | Problem | Solutions | Last commit |
 | ----- | ----- | ----- |
 | [merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-two-sorted-lists/csharp) | 12-09-2022 |
 | [palindrome-number](https://leetcode.com/problems/palindrome-number) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp) | 12-09-2022 |
 | [two-sum](https://leetcode.com/problems/two-sum) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp) | 12-09-2022 |
 | [combine-two-tables](https://leetcode.com/problems/combine-two-tables) | [MySQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/MySQL) | 11-09-2022 |
-| [employees-earning-more-than-their-managers](https://leetcode.com/problems/employees-earning-more-than-their-managers) | [MySQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/MySQL) | 11-09-2022 |
+| [employees-earning-more-than-their-managers](https://leetcode.com/problems/employees-earning-more-than-their-managers) | [csharp-sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/csharp-sql-database) - [MySQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/MySQL) | 11-09-2022 |
 | [duplicate-emails](https://leetcode.com/problems/duplicate-emails) | [MySQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/duplicate-emails/MySQL) | 11-09-2022 |
 
 
