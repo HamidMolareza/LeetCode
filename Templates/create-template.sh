@@ -27,7 +27,19 @@ if [ -z "$problemName" ]; then
   read -r problemName
 fi
 
-solutionsDir="$2"
+templateDir="$2"
+if [ -z "$templateDir" ]; then
+  if [ ! -d "$templateDir" ]; then
+    printf "template directory: "
+    read -r templateDir
+  fi
+fi
+if [ ! -d "$templateDir" ]; then
+  echo "Error! Can not find template dir in $templateDir"
+  exit 1
+fi
+
+solutionsDir="$3"
 if [ -z "$solutionsDir" ]; then
   solutionsDir="../Solutions"
   if [ ! -d "$solutionsDir" ]; then
@@ -37,18 +49,6 @@ if [ -z "$solutionsDir" ]; then
 fi
 if [ ! -d "$solutionsDir" ]; then
   echo "Error! Can not find solutions dir in $solutionsDir"
-  exit 1
-fi
-
-templateDir="$3"
-if [ -z "$templateDir" ]; then
-  if [ ! -d "$templateDir" ]; then
-    printf "template directory: "
-    read -r templateDir
-  fi
-fi
-if [ ! -d "$templateDir" ]; then
-  echo "Error! Can not find template dir in $templateDir"
   exit 1
 fi
 #===========================================================
