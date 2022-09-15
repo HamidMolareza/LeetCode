@@ -9,7 +9,7 @@
 
 ## Where is EF Core solution?
 
-look [program.cs](Program.cs) file.
+see [program.cs](Program.cs) file.
 
 ## Database
 
