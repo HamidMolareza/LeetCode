@@ -4,6 +4,10 @@ This solution has scored 100 in [LeetCode](https://leetcode.com).
 
 🌟 If you like this solution, please give it a star.
 
+## Where is solution?
+
+see [program.cs](Solution/Program.cs) file.
+
 ## Support
 
 Reach out to the maintainer at one of the following places:

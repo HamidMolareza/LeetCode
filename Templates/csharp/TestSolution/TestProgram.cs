@@ -2,7 +2,7 @@ using Solution;
 
 namespace TestProgram;
 
-public class UnitTest
+public class TestProgram
 {
     [Fact]
     public void MethodName_ScenarioUnderBeingTested_ExpectedBehavior() {
