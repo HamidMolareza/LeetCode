@@ -83,12 +83,12 @@ if [ ! -f "$questionText" ]; then
   echo 'Copy the question text here.' >"$questionText"
   echo "Please copy the question text to $questionText"
 
-  $text_editor "$questionText"
+  $text_editor "$questionText" >/dev/null
   warning_if_operation_failed "$?" "Can not open your text editor for $questionText"
 fi
 
 echo "Directory is ready: $resultDir"
-$ide "$resultDir"
+$ide "$resultDir" >/dev/null
 warning_if_operation_failed "$?" "Can not open your ide for $resultDir"
 
 echo ""
