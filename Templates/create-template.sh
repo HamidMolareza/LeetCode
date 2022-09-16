@@ -39,7 +39,18 @@ if [ ! -d "$templateDir" ]; then
   exit 1
 fi
 
-solutionsDir="$3"
+text_editor="$3"
+if [ -z "$text_editor" ]; then
+  text_editor="code"
+fi
+
+ide="$4"
+if [ -z "$ide" ]; then
+  printf "Ide: "
+  read -r ide
+fi
+
+solutionsDir="$5"
 if [ -z "$solutionsDir" ]; then
   solutionsDir="../Solutions"
   if [ ! -d "$solutionsDir" ]; then
@@ -71,6 +82,18 @@ questionText="$resultDir/README.md"
 if [ ! -f "$questionText" ]; then
   echo 'Copy the question text here.' >"$questionText"
   echo "Please copy the question text to $questionText"
+
+  $text_editor "$questionText"
+  warning_if_operation_failed "$?" "Can not open your text editor for $questionText"
 fi
 
 echo "Directory is ready: $resultDir"
+$ide "$resultDir"
+warning_if_operation_failed "$?" "Can not open your ide for $resultDir"
+
+echo ""
+printf "Do you want merge this branch to master branch?(y/N) "
+read -r merge_confirm
+if [ "$merge_confirm" = 'y' ] || [ "$merge_confirm" = 'Y' ]; then
+  ./merge-into-master-branch.sh "$problemName" "y"
+fi

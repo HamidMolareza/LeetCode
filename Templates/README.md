@@ -20,34 +20,29 @@ solve a database problem, you can use the [MySQL](MySQL) template.
 
 6. Run `create-template.sh` shell with this command:
 
-`./create-template.sh 'problem-name' 'template path' 'solutions-directory-path'`
+`./create-template.sh 'problem-name' 'template path' 'simple-code-editor-name-like-vscode' 'favorite-ide-name-like-webstorm' 'solutions-directory-path'`
 
 In the previous example:
 
-`./create-template.sh 'combine-two-tables' 'MySQL' '../Solutions'`
+`./create-template.sh 'combine-two-tables' 'MySQL' 'code' 'rider' '../Solutions'`
 
 > Note: the `'solutions-directory-path'` is optional. The default value is `'solutions-directory-path'`.
 >
 > So you can use this command:
-> `./create-template.sh 'combine-two-tables' 'MySQL'`
+> `./create-template.sh 'combine-two-tables' 'MySQL' 'code' 'rider'`
 
-7. Go to solution directory:
+7. Solve the problem
 
-`../Solutions/problem-name/template-name`
+If it is the first time that this problem is going to be solved, the text editor will open for you to put the text of the problem there.
+Then your desired IDE will be opened in the problem directory to solve the problem.
 
-In the previous example, solution directory is: `../Solutions/combine-two-tables/MySQL`
+8. Commit Solution
 
-10. Solve the problem
+9. Merge to master branch
 
-11. Commit
-
-12. (Optional) You can merge this branch into master branch with `merge-into-master-branch.sh` shell.
-
-Run the shell:
-`./merge-into-master-branch.sh 'problem-name'`
-
-In the previous example:
-`./merge-into-master-branch.sh 'combine-two-tables'`
+After you solve the problem, close the IDE.
+Then go back to the console.
+You will be asked if you want to merge this branch with the master branch. If you want, enter the `y` to merge this branch with the master branch.
 
 ## Templates
 
