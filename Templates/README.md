@@ -87,3 +87,5 @@ project: for the tests
 ### Template: MySQL
 
 With the help of this template, you can solve database problems in **MySQL** language.
+
+For more information see [template readme file](MySQL/README.md).
