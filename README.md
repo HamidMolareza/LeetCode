@@ -21,12 +21,13 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 6
+Number of problems solved: 7
 
-Number of solutions: 9
+Number of solutions: 11
 
 | Problem | Solutions | Last commit |
 | ----- | ----- | ----- |
+| [customers-who-never-order](https://leetcode.com/problems/customers-who-never-order) | [csharp-sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customers-who-never-order/csharp-sql-database) - [MySQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customers-who-never-order/MySQL) | 16-09-2022 |
 | [duplicate-emails](https://leetcode.com/problems/duplicate-emails) | [csharp-sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/duplicate-emails/csharp-sql-database) - [MySQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/duplicate-emails/MySQL) | 16-09-2022 |
 | [combine-two-tables](https://leetcode.com/problems/combine-two-tables) | [csharp-sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/csharp-sql-database) - [MySQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/MySQL) | 15-09-2022 |
 | [palindrome-number](https://leetcode.com/problems/palindrome-number) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp) | 14-09-2022 |
