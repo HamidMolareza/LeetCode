@@ -23,16 +23,16 @@ can [send your solution](#contributing) (in any language).
 
 Number of problems solved: 8
 
-Number of solutions: 12
+Number of solutions: 13
 
 | Problem | Solutions | Last commit |
 | ----- | ----- | ----- |
-| [delete-duplicate-emails](https://leetcode.com/problems/delete-duplicate-emails) | [csharp-sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/delete-duplicate-emails/csharp-sql-database) | 17-09-2022 |
-| [customers-who-never-order](https://leetcode.com/problems/customers-who-never-order) | [csharp-sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customers-who-never-order/csharp-sql-database) - [MySQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customers-who-never-order/MySQL) | 16-09-2022 |
-| [duplicate-emails](https://leetcode.com/problems/duplicate-emails) | [csharp-sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/duplicate-emails/csharp-sql-database) - [MySQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/duplicate-emails/MySQL) | 16-09-2022 |
-| [combine-two-tables](https://leetcode.com/problems/combine-two-tables) | [csharp-sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/csharp-sql-database) - [MySQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/MySQL) | 15-09-2022 |
+| [combine-two-tables](https://leetcode.com/problems/combine-two-tables) | [csharp-sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/csharp-sql-database) - [sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/sql-database) | 18-09-2022 |
+| [customers-who-never-order](https://leetcode.com/problems/customers-who-never-order) | [csharp-sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customers-who-never-order/csharp-sql-database) - [sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customers-who-never-order/sql-database) | 18-09-2022 |
+| [delete-duplicate-emails](https://leetcode.com/problems/delete-duplicate-emails) | [csharp-sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/delete-duplicate-emails/csharp-sql-database) - [sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/delete-duplicate-emails/sql-database) | 18-09-2022 |
+| [duplicate-emails](https://leetcode.com/problems/duplicate-emails) | [csharp-sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/duplicate-emails/csharp-sql-database) - [sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/duplicate-emails/sql-database) | 18-09-2022 |
+| [employees-earning-more-than-their-managers](https://leetcode.com/problems/employees-earning-more-than-their-managers) | [csharp-sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/csharp-sql-database) - [sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/sql-database) | 18-09-2022 |
 | [palindrome-number](https://leetcode.com/problems/palindrome-number) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp) | 14-09-2022 |
-| [employees-earning-more-than-their-managers](https://leetcode.com/problems/employees-earning-more-than-their-managers) | [csharp-sql-database](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/csharp-sql-database) - [MySQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/MySQL) | 13-09-2022 |
 | [merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-two-sorted-lists/csharp) | 12-09-2022 |
 | [two-sum](https://leetcode.com/problems/two-sum) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp) | 12-09-2022 |
 
