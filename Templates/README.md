@@ -46,7 +46,7 @@ You will be asked if you want to merge this branch with the master branch. If yo
 
 ## Templates
 
-### Template: csharp-sql-database
+### Template: csharp-SQL
 
 With the help of this template, you can solve database problems in **C#** language.
 
@@ -70,7 +70,7 @@ screen with the help of pre-made methods.
 
 5. Open the `Program.cs` and implement your solution in `Solution` method.
 
-For more information see [template readme file](csharp-sql-database/README.md).
+For more information see [template readme file](csharp-SQL/README.md).
 
 ### Template: csharp
 
@@ -79,8 +79,8 @@ With the help of this template, you can solve problems in **C#** language.
 There are two projects in this template. 1- The `Solution` project: to implement the solution 2- The `TestSolution`
 project: for the tests
 
-### Template: MySQL
+### Template: SQL
 
-With the help of this template, you can solve database problems in **MySQL** language.
+With the help of this template, you can solve database problems.
 
-For more information see [template readme file](MySQL/README.md).
+For more information see [template readme file](SQL/README.md).
