@@ -21,12 +21,14 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 9
+Number of problems solved: 11
 
-Number of solutions: 15
+Number of solutions: 19
 
 | Problem | Solutions | Last commit |
 | ----- | ----- | ----- |
+| [customer-placing-the-largest-number-of-orders](https://leetcode.com/problems/customer-placing-the-largest-number-of-orders) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customer-placing-the-largest-number-of-orders/SQL) - [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customer-placing-the-largest-number-of-orders/csharp-SQL) | 20-09-2022 |
+| [find-customer-referee](https://leetcode.com/problems/find-customer-referee) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-customer-referee/SQL) - [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-customer-referee/csharp-SQL) | 20-09-2022 |
 | [rising-temperature](https://leetcode.com/problems/rising-temperature) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/rising-temperature/SQL) - [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/rising-temperature/csharp-SQL) | 20-09-2022 |
 | [combine-two-tables](https://leetcode.com/problems/combine-two-tables) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/SQL) - [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/csharp-SQL) | 18-09-2022 |
 | [customers-who-never-order](https://leetcode.com/problems/customers-who-never-order) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customers-who-never-order/SQL) - [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customers-who-never-order/csharp-SQL) | 18-09-2022 |
