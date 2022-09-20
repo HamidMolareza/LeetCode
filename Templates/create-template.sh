@@ -22,7 +22,7 @@ create_dir_if_is_not_exist() {
 
 ensure_problem_name_is_valid() {
   problem_name="$1"
-  
+
   printf "Validating problem name... "
   status_code=$(curl -s -o /dev/null -w "%{http_code}" https://leetcode.com/problems/$problem_name/)
   if [ "$status_code" != "200" ]; then
@@ -60,20 +60,14 @@ if [ ! -d "$templateDir" ]; then
   exit 1
 fi
 
-text_editor="$3"
-if [ -z "$text_editor" ]; then
-  text_editor="code"
-fi
-ensure_ide_is_valid "$text_editor"
-
-ide="$4"
+ide="$3"
 if [ -z "$ide" ]; then
   printf "Ide: "
   read -r ide
 fi
 ensure_ide_is_valid "$ide"
 
-solutions_dir="$5"
+solutions_dir="$4"
 if [ -z "$solutions_dir" ]; then
   solutions_dir="../Solutions"
   if [ ! -d "$solutions_dir" ]; then
@@ -105,9 +99,6 @@ questionText="$result_dir/README.md"
 if [ ! -f "$questionText" ]; then
   echo 'Copy the question text here.' >"$questionText"
   echo "Please copy the question text to $questionText"
-
-  $text_editor "$questionText" >/dev/null
-  warning_if_operation_failed "$?" "Can not open your text editor for $questionText"
 fi
 
 echo "Directory is ready: $result_dir"
