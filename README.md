@@ -21,12 +21,13 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 8
+Number of problems solved: 9
 
-Number of solutions: 13
+Number of solutions: 15
 
 | Problem | Solutions | Last commit |
 | ----- | ----- | ----- |
+| [rising-temperature](https://leetcode.com/problems/rising-temperature) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/rising-temperature/SQL) - [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/rising-temperature/csharp-SQL) | 20-09-2022 |
 | [combine-two-tables](https://leetcode.com/problems/combine-two-tables) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/SQL) - [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/csharp-SQL) | 18-09-2022 |
 | [customers-who-never-order](https://leetcode.com/problems/customers-who-never-order) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customers-who-never-order/SQL) - [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customers-who-never-order/csharp-SQL) | 18-09-2022 |
 | [delete-duplicate-emails](https://leetcode.com/problems/delete-duplicate-emails) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/delete-duplicate-emails/SQL) - [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/delete-duplicate-emails/csharp-SQL) | 18-09-2022 |
