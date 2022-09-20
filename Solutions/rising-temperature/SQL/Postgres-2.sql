@@ -2,11 +2,11 @@
 Create table If Not Exists Weather
 (
     id
-        int,
+    int,
     recordDate
-        date,
+    date,
     temperature
-        int
+    int
 );
 Truncate table Weather;
 insert into Weather
@@ -29,12 +29,11 @@ values ('1',
         '2015-01-04',
         '30');
 
--- Write your MySQL query statement below
-SELECT w.id AS 'Id'
-FROM Weather
-         JOIN Weather w
-              ON DATEDIFF(w.recordDate, Weather.recordDate) = 1
-                  AND w.Temperature > Weather.Temperature;
+-- Write your Postgres query statement below
+SELECT w2.id
+FROM Weather w1, Weather w2
+WHERE w2.recordDate - w1.recordDate = 1
+  AND w2.temperature > w1.temperature;
 
 -- Remove Data
 DROP TABLE Weather;
