@@ -1,8 +1,8 @@
 -- Create Items
 
 
--- Write your MySQL query statement below
+-- Write your Postgres query statement below
 
 
 -- Remove Data
-DROP TABLE _TABLE_NAME_;
+DROP TABLE TABLE_NAME;
