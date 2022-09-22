@@ -151,7 +151,7 @@ namespace LeetCode {
 
                     var lastCommitFormatted = problem.LastSolutionsCommit.ToString("dd-MM-yyyy");
                     source.AppendLine(
-                        $"| [{problem.Name}]({link}) | {solutionLinks} | {lastCommitFormatted} |");
+                        $"| [{problem.Name.Replace("-", " ")}]({link}) | {solutionLinks} | {lastCommitFormatted} |");
                 });
 
         private static Task<Result<DateTime>> GetLastCommitDateAsync(string path) =>
