@@ -25,7 +25,7 @@ ensure_problem_name_is_valid() {
 
   printf "Validating problem name... "
   status_code=$(curl -s -o /dev/null -w "%{http_code}" https://leetcode.com/problems/$problem_name/)
-  if [ "$status_code" != "200" ]; then
+  if [ "$status_code" != "200" ] && [ "$status_code" != "302" ]; then
     echo "Error! It seems that the name is not valid. (Id: $problem_name, status code: $status_code)"
     exit 1
   fi
