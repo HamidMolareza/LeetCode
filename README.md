@@ -23,11 +23,11 @@ can [send your solution](#contributing) (in any language).
 
 Number of problems solved: 13
 
-Number of solutions: 22
+Number of solutions: 23
 
 | Problem | Solutions | Last commit |
 | ----- | ----- | ----- |
-| [big countries](https://leetcode.com/problems/big-countries) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/big-countries/SQL) | 27-09-2022 |
+| [big countries](https://leetcode.com/problems/big-countries) | [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/big-countries/csharp-SQL) - [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/big-countries/SQL) | 27-09-2022 |
 | [employee bonus](https://leetcode.com/problems/employee-bonus) | [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employee-bonus/csharp-SQL) - [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employee-bonus/SQL) | 22-09-2022 |
 | [customer placing the largest number of orders](https://leetcode.com/problems/customer-placing-the-largest-number-of-orders) | [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customer-placing-the-largest-number-of-orders/csharp-SQL) - [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customer-placing-the-largest-number-of-orders/SQL) | 20-09-2022 |
 | [find customer referee](https://leetcode.com/problems/find-customer-referee) | [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-customer-referee/csharp-SQL) - [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-customer-referee/SQL) | 20-09-2022 |
