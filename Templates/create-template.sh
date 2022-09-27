@@ -20,14 +20,14 @@ create_dir_if_is_not_exist() {
   fi
 }
 
-ensure_problem_name_is_valid() {
+validate_problem_name() {
   problem_name="$1"
 
   printf "Validating problem name... "
-  status_code=$(curl -s -o /dev/null -w "%{http_code}" https://leetcode.com/problems/$problem_name/)
+  status_code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 https://leetcode.com/problems/$problem_name/)
   if [ "$status_code" != "200" ] && [ "$status_code" != "302" ]; then
     echo "Error! It seems that the name is not valid. (Id: $problem_name, status code: $status_code)"
-    exit 1
+    return 1
   fi
   echo "done."
 }
@@ -46,7 +46,14 @@ if [ -z "$problem_name" ]; then
   printf "Problem name (slug): "
   read -r problem_name
 fi
-ensure_problem_name_is_valid "$problem_name"
+validate_problem_name "$problem_name"
+if [ "$?" != 0 ]; then
+  printf "Do you want to ignore this error?(Y/n) "
+  read -r ignore_error
+  if [ "$ignore_error" = 'n' ] || [ "$ignore_error" = 'N' ]; then
+    exit 0
+  fi
+fi
 
 templateDir="$2"
 if [ -z "$templateDir" ]; then
