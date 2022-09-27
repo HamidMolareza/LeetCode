@@ -111,3 +111,10 @@ read -r merge_confirm
 if [ "$merge_confirm" = 'y' ] || [ "$merge_confirm" = 'Y' ]; then
   ./merge-into-master-branch.sh "$problem_name" "y"
 fi
+
+printf "Do you want push master branch?(y/N) "
+read -r push_confirm
+if [ "$push_confirm" = 'y' ] || [ "$push_confirm" = 'Y' ]; then
+  git pull --rebase
+  git push
+fi
