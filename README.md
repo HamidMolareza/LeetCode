@@ -23,11 +23,11 @@ can [send your solution](#contributing) (in any language).
 
 Number of problems solved: 14
 
-Number of solutions: 24
+Number of solutions: 25
 
 | Problem | Solutions | Last commit |
 | ----- | ----- | ----- |
-| [classes more than 5 students](https://leetcode.com/problems/classes-more-than-5-students) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/classes-more-than-5-students/SQL) | 03-10-2022 |
+| [classes more than 5 students](https://leetcode.com/problems/classes-more-than-5-students) | [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/classes-more-than-5-students/csharp-SQL) - [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/classes-more-than-5-students/SQL) | 03-10-2022 |
 | [big countries](https://leetcode.com/problems/big-countries) | [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/big-countries/csharp-SQL) - [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/big-countries/SQL) | 27-09-2022 |
 | [employee bonus](https://leetcode.com/problems/employee-bonus) | [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employee-bonus/csharp-SQL) - [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employee-bonus/SQL) | 22-09-2022 |
 | [customer placing the largest number of orders](https://leetcode.com/problems/customer-placing-the-largest-number-of-orders) | [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customer-placing-the-largest-number-of-orders/csharp-SQL) - [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customer-placing-the-largest-number-of-orders/SQL) | 20-09-2022 |
