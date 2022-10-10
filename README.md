@@ -21,12 +21,13 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 17
+Number of problems solved: 18
 
-Number of solutions: 29
+Number of solutions: 30
 
 | Problem | Solutions | Last commit |
 | ----- | ----- | ----- |
+| [triangle judgement](https://leetcode.com/problems/triangle-judgement) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/triangle-judgement/SQL) | 10-10-2022 |
 | [sales person](https://leetcode.com/problems/sales-person) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/sales-person/SQL) | 08-10-2022 |
 | [consecutive available seats](https://leetcode.com/problems/consecutive-available-seats) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/consecutive-available-seats/SQL) | 07-10-2022 |
 | [friend requests i overall acceptance rate](https://leetcode.com/problems/friend-requests-i-overall-acceptance-rate) | [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/friend-requests-i-overall-acceptance-rate/csharp-SQL) - [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/friend-requests-i-overall-acceptance-rate/SQL) | 06-10-2022 |
