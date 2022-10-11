@@ -21,12 +21,13 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 19
+Number of problems solved: 20
 
-Number of solutions: 31
+Number of solutions: 32
 
 | Problem | Solutions | Last commit |
 | ----- | ----- | ----- |
+| [biggest single number](https://leetcode.com/problems/biggest-single-number) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/biggest-single-number/SQL) | 11-10-2022 |
 | [shortest distance in a line](https://leetcode.com/problems/shortest-distance-in-a-line) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/shortest-distance-in-a-line/SQL) | 11-10-2022 |
 | [triangle judgement](https://leetcode.com/problems/triangle-judgement) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/triangle-judgement/SQL) | 10-10-2022 |
 | [sales person](https://leetcode.com/problems/sales-person) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/sales-person/SQL) | 08-10-2022 |
