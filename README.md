@@ -21,12 +21,13 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 22
+Number of problems solved: 23
 
-Number of solutions: 34
+Number of solutions: 35
 
 | Problem | Solutions | Last commit |
 | ----- | ----- | ----- |
+| [actors and directors who cooperated at least three times](https://leetcode.com/problems/actors-and-directors-who-cooperated-at-least-three-times) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/actors-and-directors-who-cooperated-at-least-three-times/SQL) | 13-10-2022 |
 | [swap salary](https://leetcode.com/problems/swap-salary) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/swap-salary/SQL) | 12-10-2022 |
 | [not boring movies](https://leetcode.com/problems/not-boring-movies) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/not-boring-movies/SQL) | 12-10-2022 |
 | [biggest single number](https://leetcode.com/problems/biggest-single-number) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/biggest-single-number/SQL) | 11-10-2022 |
