@@ -14,20 +14,20 @@ using OnRail.Extensions.Map;
 using OnRail.Extensions.OnFail;
 using OnRail.Extensions.OnSuccess;
 using OnRail.Extensions.SelectResults;
-using OnRail.Extensions.ThrowException;
 using OnRail.Extensions.Try;
 
 namespace LeetCode {
     public static class Program {
-        private static Configs _configs;
-        private static Arguments _arguments;
+        private static Configs _configs = null!;
+        private static Arguments _arguments = null!;
 
         public static Task Main(string[] args) =>
             InnerMainAsync(args)
                 .OnSuccess(() => Console.WriteLine("The operation was completed successfully."))
                 .OnFail(result => {
-                    result.Detail.Log();
+                    result.Detail?.Log();
                     Environment.ExitCode = -1;
+                    return result;
                 });
 
         private static Task<Result> InnerMainAsync(IReadOnlyCollection<string> args) =>
@@ -47,21 +47,16 @@ namespace LeetCode {
                             SolutionsDirectory = solutionsDirectory
                         })).Map());
 
-        private static async Task<Result> LoadConfigFileAsync(int numOfTry = 2) {
-            var result = await TryExtensions
-                .Try(() => Path.Combine(_arguments.ProgramDirectory, Configs.ConfigFile))
+        private static Task<Result> LoadConfigFileAsync(int numOfTry = 2) =>
+            TryExtensions.Try(() => Path.Combine(_arguments.ProgramDirectory, Configs.ConfigFile))
                 .OnSuccess(configFile => File.ReadAllTextAsync(configFile), numOfTry)
                 .OnSuccess(configFile => JsonSerializer.Deserialize<Configs>(configFile))
-                .OnSuccess(configs => _configs = configs);
-            //TODO: Use .Map() in new version of OnRail
-            return result.IsSuccess
-                ? Result.Ok()
-                : Result.Fail(result.Detail);
-        }
+                .OnSuccess(configs => _configs = configs!)
+                .Map();
 
         private static Task<Result<List<Problem>>> GetProblemsAsync() =>
             TryExtensions.Try(() => Directory.GetDirectories(_arguments.SolutionsDirectory), _configs.NumOfTry)
-                .OnSuccess(problemDirs => problemDirs.SelectResultsAsync(GetProblemAsync))
+                .OnSuccess(problemDirs => problemDirs.SelectResults(GetProblemAsync))
                 .OnSuccess(problems => problems.Where(problem => problem is not null).ToList())!;
 
         private static Task<Result<Problem?>> GetProblemAsync(string problemDir) =>
@@ -79,17 +74,17 @@ namespace LeetCode {
                         Solutions = solutions,
                         LastSolutionsCommit = solutions.GetLastCommitDateTime()
                     };
-                }).OnFail(new {problemDir});
+                }).OnFailAddMoreDetails(new {problemDir});
 
         private static Task<Result<List<Solution>>> GetSolutionsAsync(string[] languageDirs) =>
-            languageDirs.SelectResultsAsync(async languageDir =>
+            languageDirs.SelectResults(async languageDir =>
                 await GetLastCommitDateAsync(languageDir)
                     .OnSuccess(lastCommitDate => new Solution {
                         LanguageName = new FileInfo(languageDir).Name,
                         LastCommitDate = lastCommitDate
                     }).OnFail(e => {
                         Console.WriteLine($"Warning! Error while get last commit of {languageDir}");
-                        Console.WriteLine($"More Data: {e.Detail.GetHeaderOfError()}");
+                        Console.WriteLine($"More Data: {e.Detail?.GetHeaderOfError()}");
                         Console.WriteLine("We skipped this error.\n");
                         return Result<Solution>.Ok(new Solution());
                     })
@@ -105,7 +100,7 @@ namespace LeetCode {
         private static Task SaveDataAsync(string outputDir, string readme, int numOfTry) =>
             TryExtensions.Try(() =>
                     File.WriteAllTextAsync(Path.Combine(outputDir, _configs.ReadmeFileName), readme), numOfTry)
-                .OnFail(new {outputDir});
+                .OnFailAddMoreDetails(new {outputDir});
 
         private static async Task<string> CreateReadmeAsync(IEnumerable<Problem> problems) {
             var problemsList = problems.ToList();
@@ -129,7 +124,7 @@ namespace LeetCode {
                 Console.Write($"Processing problem {problem.Name}... ");
 
                 result.AppendProblemData(problem)
-                    .OnFail(failedResult => failedResult.ThrowExceptionOnFail());
+                    .OnFail(failedResult => failedResult.OnFailThrowException());
 
                 Console.WriteLine("Done");
             }
@@ -161,6 +156,6 @@ namespace LeetCode {
                 .OnSuccess(cmd => {
                     var result = cmd.StandardOutput.Remove(0, 8);
                     return DateTime.Parse(result[..^7]);
-                }).OnFail(new {path});
+                }).OnFailAddMoreDetails(new {path});
     }
 }
