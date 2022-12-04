@@ -113,8 +113,8 @@ namespace LeetCode {
             if (numOfQuestionsSolved != numOfSolutions)
                 result.AppendLine($"Number of solutions: {numOfSolutions}\n");
 
-            result.AppendLine("| Problem | Solutions | Last commit |")
-                .AppendLine("| ----- | ----- | ----- |");
+            result.AppendLine("| Problem | Description | Solutions | Last commit |")
+                .AppendLine("| ----- | ----- | ----- | ----- |");
 
             problemsList = problemsList.OrderByDescending(problem => problem.LastSolutionsCommit)
                 .ThenBy(problem => problem.Name)
@@ -137,16 +137,18 @@ namespace LeetCode {
         private static Result AppendProblemData(this StringBuilder source, Problem problem) =>
             TryExtensions.Try(() => string.Format(_configs.LeetCodeProblemFormat, problem.Name))
                 .OnSuccess(link => {
+                    var solutionsUrl = string.Format(_configs.SolutionUrlFormat, problem.Name);
                     var solutions = problem.Solutions.Select(solution => {
-                        var solutionUrl = string.Format(_configs.SolutionUrlFormat, problem.Name);
-                        solutionUrl = Path.Combine(solutionUrl, solution.LanguageName);
-                        return $"[{solution.LanguageName}]({solutionUrl})"; //todo: OK?
+                       var solutionUrl = Path.Combine(solutionsUrl, solution.LanguageName);
+                        return $"[{solution.LanguageName}]({solutionUrl})";
                     });
                     var solutionLinks = string.Join(" - ", solutions);
 
                     var lastCommitFormatted = problem.LastSolutionsCommit.ToString("dd-MM-yyyy");
-                    source.AppendLine(
-                        $"| [{problem.Name.Replace("-", " ")}]({link}) | {solutionLinks} | {lastCommitFormatted} |");
+                    var readmeUrl = Path.Combine(solutionsUrl, "README.md");
+                    var line =
+                        $"| [{problem.Name.Replace("-", " ")}]({link}) | [Readme]({readmeUrl}) | {solutionLinks} | {lastCommitFormatted} |";
+                    source.AppendLine(line);
                 });
 
         private static Task<Result<DateTime>> GetLastCommitDateAsync(string path) =>
