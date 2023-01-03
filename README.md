@@ -23,10 +23,11 @@ can [send your solution](#contributing) (in any language).
 
 Number of problems solved: 27
 
-Number of solutions: 39
+Number of solutions: 40
 
 | Problem | Description | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [two sum](https://leetcode.com/problems/two-sum) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/typescript) - [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp) | 03-01-2023 |
 | [project employees II](https://leetcode.com/problems/project-employees-II) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/project-employees-II/README.md) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/project-employees-II/SQL) | 18-10-2022 |
 | [project employees I](https://leetcode.com/problems/project-employees-I) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/project-employees-I/README.md) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/project-employees-I/SQL) | 16-10-2022 |
 | [product sales analysis II](https://leetcode.com/problems/product-sales-analysis-II) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/product-sales-analysis-II/README.md) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/product-sales-analysis-II/SQL) | 16-10-2022 |
@@ -53,7 +54,6 @@ Number of solutions: 39
 | [employees earning more than their managers](https://leetcode.com/problems/employees-earning-more-than-their-managers) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/README.md) | [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/csharp-SQL) - [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/SQL) | 18-09-2022 |
 | [palindrome number](https://leetcode.com/problems/palindrome-number) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp) | 14-09-2022 |
 | [merge two sorted lists](https://leetcode.com/problems/merge-two-sorted-lists) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-two-sorted-lists/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-two-sorted-lists/csharp) | 12-09-2022 |
-| [two sum](https://leetcode.com/problems/two-sum) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp) | 12-09-2022 |
 
 
 ## Usage
