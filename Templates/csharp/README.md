@@ -6,7 +6,7 @@ This solution has scored 100 in [LeetCode](https://leetcode.com).
 
 ## Where is solution?
 
-see [program.cs](Solution/Program.cs) file.
+see [Program.cs](Program.cs) file.
 
 ## Support
 
