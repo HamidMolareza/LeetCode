@@ -21,15 +21,16 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 29
+Number of problems solved: 30
 
-Number of solutions: 42
+Number of solutions: 43
 
 | Problem | Description | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [valid parentheses](https://leetcode.com/problems/valid-parentheses) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/typescript) | 13-01-2023 |
 | [longest common prefix](https://leetcode.com/problems/longest-common-prefix) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/csharp) | 09-01-2023 |
 | [roman to integer](https://leetcode.com/problems/roman-to-integer) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/csharp) | 07-01-2023 |
-| [two sum](https://leetcode.com/problems/two-sum) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/typescript) - [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp) | 03-01-2023 |
+| [two sum](https://leetcode.com/problems/two-sum) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp) - [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/typescript) | 03-01-2023 |
 | [project employees II](https://leetcode.com/problems/project-employees-II) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/project-employees-II/README.md) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/project-employees-II/SQL) | 18-10-2022 |
 | [project employees I](https://leetcode.com/problems/project-employees-I) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/project-employees-I/README.md) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/project-employees-I/SQL) | 16-10-2022 |
 | [product sales analysis II](https://leetcode.com/problems/product-sales-analysis-II) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/product-sales-analysis-II/README.md) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/product-sales-analysis-II/SQL) | 16-10-2022 |
