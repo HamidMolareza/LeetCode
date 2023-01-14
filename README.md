@@ -23,10 +23,11 @@ can [send your solution](#contributing) (in any language).
 
 Number of problems solved: 30
 
-Number of solutions: 43
+Number of solutions: 44
 
 | Problem | Description | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [palindrome number](https://leetcode.com/problems/palindrome-number) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp) - [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/typescript) | 14-01-2023 |
 | [valid parentheses](https://leetcode.com/problems/valid-parentheses) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/typescript) | 13-01-2023 |
 | [longest common prefix](https://leetcode.com/problems/longest-common-prefix) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/csharp) | 09-01-2023 |
 | [roman to integer](https://leetcode.com/problems/roman-to-integer) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/csharp) | 07-01-2023 |
@@ -55,7 +56,6 @@ Number of solutions: 43
 | [delete duplicate emails](https://leetcode.com/problems/delete-duplicate-emails) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/delete-duplicate-emails/README.md) | [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/delete-duplicate-emails/csharp-SQL) - [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/delete-duplicate-emails/SQL) | 18-09-2022 |
 | [duplicate emails](https://leetcode.com/problems/duplicate-emails) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/duplicate-emails/README.md) | [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/duplicate-emails/csharp-SQL) - [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/duplicate-emails/SQL) | 18-09-2022 |
 | [employees earning more than their managers](https://leetcode.com/problems/employees-earning-more-than-their-managers) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/README.md) | [csharp-SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/csharp-SQL) - [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/SQL) | 18-09-2022 |
-| [palindrome number](https://leetcode.com/problems/palindrome-number) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp) | 14-09-2022 |
 | [merge two sorted lists](https://leetcode.com/problems/merge-two-sorted-lists) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-two-sorted-lists/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-two-sorted-lists/csharp) | 12-09-2022 |
 
 
