@@ -21,12 +21,13 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 30
+Number of problems solved: 31
 
-Number of solutions: 44
+Number of solutions: 45
 
 | Problem | Description | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [remove duplicates from sorted array](https://leetcode.com/problems/remove-duplicates-from-sorted-array) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-array/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-array/csharp) | 15-01-2023 |
 | [palindrome number](https://leetcode.com/problems/palindrome-number) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp) - [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/typescript) | 14-01-2023 |
 | [valid parentheses](https://leetcode.com/problems/valid-parentheses) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/typescript) | 13-01-2023 |
 | [longest common prefix](https://leetcode.com/problems/longest-common-prefix) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/csharp) | 09-01-2023 |
