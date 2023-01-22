@@ -21,12 +21,13 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 32
+Number of problems solved: 33
 
-Number of solutions: 46
+Number of solutions: 47
 
 | Problem | Description | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [search insert position](https://leetcode.com/problems/search-insert-position) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/csharp) | 22-01-2023 |
 | [remove element](https://leetcode.com/problems/remove-element) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-element/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-element/typescript) | 20-01-2023 |
 | [remove duplicates from sorted array](https://leetcode.com/problems/remove-duplicates-from-sorted-array) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-array/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-array/csharp) | 15-01-2023 |
 | [palindrome number](https://leetcode.com/problems/palindrome-number) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/typescript) - [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp) | 14-01-2023 |
