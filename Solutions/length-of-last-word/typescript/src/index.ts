@@ -9,3 +9,11 @@ function lengthOfLastWord(s: string): number {
     return lastWord.length;
 }
 
+function lengthOfLastWord2(s: string): number {
+    return [...s.matchAll(/[A-Za-z]+/g)].pop()![0].length;
+}
+
+function lengthOfLastWord3(s: string): number {
+    return s.trim().split(" ").filter(word => word.length > 0).pop()!.length
+}
+
