@@ -14,6 +14,6 @@ function lengthOfLastWord2(s: string): number {
 }
 
 function lengthOfLastWord3(s: string): number {
-    return s.trim().split(" ").filter(word => word.length > 0).pop()!.length
+    return s.trim().split(" ").pop()!.length
 }
 
