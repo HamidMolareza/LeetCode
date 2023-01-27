@@ -27,7 +27,7 @@ Number of solutions: 48
 
 | Problem | Description | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
-| [length of last word](https://leetcode.com/problems/length-of-last-word) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/typescript) | 24-01-2023 |
+| [length of last word](https://leetcode.com/problems/length-of-last-word) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/typescript) | 28-01-2023 |
 | [search insert position](https://leetcode.com/problems/search-insert-position) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/csharp) | 22-01-2023 |
 | [remove element](https://leetcode.com/problems/remove-element) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-element/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-element/typescript) | 20-01-2023 |
 | [remove duplicates from sorted array](https://leetcode.com/problems/remove-duplicates-from-sorted-array) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-array/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-array/csharp) | 15-01-2023 |
