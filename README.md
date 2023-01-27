@@ -21,12 +21,13 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 34
+Number of problems solved: 35
 
-Number of solutions: 48
+Number of solutions: 49
 
 | Problem | Description | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [plus one](https://leetcode.com/problems/plus-one) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/plus-one/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/plus-one/csharp) | 28-01-2023 |
 | [length of last word](https://leetcode.com/problems/length-of-last-word) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/typescript) | 28-01-2023 |
 | [search insert position](https://leetcode.com/problems/search-insert-position) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/csharp) | 22-01-2023 |
 | [remove element](https://leetcode.com/problems/remove-element) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-element/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-element/typescript) | 20-01-2023 |
