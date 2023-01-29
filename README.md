@@ -21,12 +21,13 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 36
+Number of problems solved: 37
 
-Number of solutions: 50
+Number of solutions: 51
 
 | Problem | Description | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [sqrtx](https://leetcode.com/problems/sqrtx) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/sqrtx/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/sqrtx/csharp) | 30-01-2023 |
 | [add binary](https://leetcode.com/problems/add-binary) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/typescript) | 29-01-2023 |
 | [plus one](https://leetcode.com/problems/plus-one) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/plus-one/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/plus-one/csharp) | 28-01-2023 |
 | [length of last word](https://leetcode.com/problems/length-of-last-word) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/typescript) | 28-01-2023 |
