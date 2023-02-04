@@ -21,12 +21,13 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 37
+Number of problems solved: 38
 
-Number of solutions: 51
+Number of solutions: 52
 
 | Problem | Description | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [climbing stairs](https://leetcode.com/problems/climbing-stairs) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/typescript) | 04-02-2023 |
 | [sqrtx](https://leetcode.com/problems/sqrtx) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/sqrtx/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/sqrtx/csharp) | 30-01-2023 |
 | [add binary](https://leetcode.com/problems/add-binary) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/typescript) | 29-01-2023 |
 | [plus one](https://leetcode.com/problems/plus-one) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/plus-one/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/plus-one/csharp) | 28-01-2023 |
