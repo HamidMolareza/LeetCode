@@ -21,12 +21,13 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 38
+Number of problems solved: 39
 
-Number of solutions: 52
+Number of solutions: 53
 
 | Problem | Description | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [remove duplicates from sorted list](https://leetcode.com/problems/remove-duplicates-from-sorted-list) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-list/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-list/csharp) | 06-02-2023 |
 | [climbing stairs](https://leetcode.com/problems/climbing-stairs) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/typescript) | 04-02-2023 |
 | [sqrtx](https://leetcode.com/problems/sqrtx) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/sqrtx/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/sqrtx/csharp) | 30-01-2023 |
 | [add binary](https://leetcode.com/problems/add-binary) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/typescript) | 29-01-2023 |
