@@ -21,12 +21,13 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 41
+Number of problems solved: 42
 
-Number of solutions: 55
+Number of solutions: 56
 
 | Problem | Description | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [same tree](https://leetcode.com/problems/same-tree) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/typescript) | 16-02-2023 |
 | [binary tree inorder traversal](https://leetcode.com/problems/binary-tree-inorder-traversal) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/binary-tree-inorder-traversal/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/binary-tree-inorder-traversal/csharp) | 15-02-2023 |
 | [merge sorted array](https://leetcode.com/problems/merge-sorted-array) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/typescript) | 12-02-2023 |
 | [remove duplicates from sorted list](https://leetcode.com/problems/remove-duplicates-from-sorted-list) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-list/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-list/csharp) | 06-02-2023 |
