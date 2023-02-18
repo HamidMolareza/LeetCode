@@ -21,12 +21,13 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 42
+Number of problems solved: 43
 
-Number of solutions: 56
+Number of solutions: 57
 
 | Problem | Description | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [symmetric tree](https://leetcode.com/problems/symmetric-tree) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/symmetric-tree/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/symmetric-tree/csharp) | 18-02-2023 |
 | [same tree](https://leetcode.com/problems/same-tree) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/typescript) | 16-02-2023 |
 | [binary tree inorder traversal](https://leetcode.com/problems/binary-tree-inorder-traversal) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/binary-tree-inorder-traversal/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/binary-tree-inorder-traversal/csharp) | 15-02-2023 |
 | [merge sorted array](https://leetcode.com/problems/merge-sorted-array) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/typescript) | 12-02-2023 |
@@ -39,11 +40,11 @@ Number of solutions: 56
 | [search insert position](https://leetcode.com/problems/search-insert-position) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/csharp) | 22-01-2023 |
 | [remove element](https://leetcode.com/problems/remove-element) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-element/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-element/typescript) | 20-01-2023 |
 | [remove duplicates from sorted array](https://leetcode.com/problems/remove-duplicates-from-sorted-array) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-array/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-array/csharp) | 15-01-2023 |
-| [palindrome number](https://leetcode.com/problems/palindrome-number) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/typescript) - [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp) | 14-01-2023 |
+| [palindrome number](https://leetcode.com/problems/palindrome-number) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp) - [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/typescript) | 14-01-2023 |
 | [valid parentheses](https://leetcode.com/problems/valid-parentheses) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/typescript) | 13-01-2023 |
 | [longest common prefix](https://leetcode.com/problems/longest-common-prefix) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/csharp) | 09-01-2023 |
 | [roman to integer](https://leetcode.com/problems/roman-to-integer) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/csharp) | 07-01-2023 |
-| [two sum](https://leetcode.com/problems/two-sum) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/typescript) - [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp) | 03-01-2023 |
+| [two sum](https://leetcode.com/problems/two-sum) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp) - [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/typescript) | 03-01-2023 |
 | [project employees II](https://leetcode.com/problems/project-employees-II) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/project-employees-II/README.md) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/project-employees-II/SQL) | 18-10-2022 |
 | [project employees I](https://leetcode.com/problems/project-employees-I) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/project-employees-I/README.md) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/project-employees-I/SQL) | 16-10-2022 |
 | [product sales analysis II](https://leetcode.com/problems/product-sales-analysis-II) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/product-sales-analysis-II/README.md) | [SQL](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/product-sales-analysis-II/SQL) | 16-10-2022 |
