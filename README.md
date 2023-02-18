@@ -21,12 +21,13 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
-Number of problems solved: 43
+Number of problems solved: 44
 
-Number of solutions: 57
+Number of solutions: 58
 
 | Problem | Description | Solutions | Last commit |
 | ----- | ----- | ----- | ----- |
+| [maximum depth of binary tree](https://leetcode.com/problems/maximum-depth-of-binary-tree) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/maximum-depth-of-binary-tree/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/maximum-depth-of-binary-tree/typescript) | 19-02-2023 |
 | [symmetric tree](https://leetcode.com/problems/symmetric-tree) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/symmetric-tree/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/symmetric-tree/csharp) | 18-02-2023 |
 | [same tree](https://leetcode.com/problems/same-tree) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/README.md) | [typescript](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/typescript) | 16-02-2023 |
 | [binary tree inorder traversal](https://leetcode.com/problems/binary-tree-inorder-traversal) | [Readme](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/binary-tree-inorder-traversal/README.md) | [csharp](https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/binary-tree-inorder-traversal/csharp) | 15-02-2023 |
