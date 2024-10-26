@@ -1,163 +1,163 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.CommandLine;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
-using CliWrap;
-using CliWrap.Buffered;
-using LeetCode.ErrorDetails;
-using LeetCode.Models;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using OnRail;
-using OnRail.Extensions.Map;
 using OnRail.Extensions.OnFail;
-using OnRail.Extensions.OnSuccess;
-using OnRail.Extensions.SelectResults;
 using OnRail.Extensions.Try;
+using OnRail.ResultDetails;
+using ReadmeGenerator.Collector;
+using ReadmeGenerator.Configs;
+using ReadmeGenerator.Generator;
+using ReadmeGenerator.Helpers;
+using Serilog;
+using Serilog.Events;
 
-namespace LeetCode {
-    public static class Program {
-        private static Configs _configs = null!;
-        private static Arguments _arguments = null!;
+namespace ReadmeGenerator;
 
-        public static Task Main(string[] args) =>
-            InnerMainAsync(args)
-                .OnSuccess(() => Console.WriteLine("The operation was completed successfully."))
-                .OnFail(result => {
-                    result.Detail?.Log();
-                    Environment.ExitCode = -1;
-                    return result;
-                });
+public static class Program {
+    public static Task Main(string[] args) =>
+        TryExtensions.Try(() => InnerMain(args))
+            .OnFailTee(GlobalErrorLog);
 
-        private static Task<Result> InnerMainAsync(IReadOnlyCollection<string> args) =>
-            LoadOrGetArguments(args)
-                .OnSuccess(() => LoadConfigFileAsync())
-                .OnSuccess(GetProblemsAsync)
-                .OnSuccess(CreateReadmeAsync)
-                .OnSuccess(readme => SaveDataAsync(_arguments.OutputDirectory, readme, _configs.NumOfTry));
+    private static void GlobalErrorLog<T>(Result<T>? result) {
+        if (result is null || result.IsSuccess) return;
+        GlobalErrorLog(result.Detail);
+    }
 
-        private static Result LoadOrGetArguments(IReadOnlyCollection<string> args) =>
-            Arguments.GetProgramDirectory(args.FirstOrDefault())
-                .OnSuccess(programDirectory => Arguments.GetOutputDirectory(args.Skip(1).FirstOrDefault())
-                    .OnSuccess(outputDirectory => Arguments.GetSolutionsDirectory(args.Skip(2).FirstOrDefault())
-                        .OnSuccess(solutionsDirectory => _arguments = new Arguments {
-                            ProgramDirectory = programDirectory,
-                            OutputDirectory = outputDirectory,
-                            SolutionsDirectory = solutionsDirectory
-                        })).Map());
+    private static void GlobalErrorLog(Result? result) {
+        if (result is null || result.IsSuccess) return;
+        GlobalErrorLog(result.Detail);
+    }
 
-        private static Task<Result> LoadConfigFileAsync(int numOfTry = 2) =>
-            TryExtensions.Try(() => Path.Combine(_arguments.ProgramDirectory, Configs.ConfigFile))
-                .OnSuccess(configFile => File.ReadAllTextAsync(configFile), numOfTry)
-                .OnSuccess(configFile => JsonSerializer.Deserialize<Configs>(configFile))
-                .OnSuccess(configs => _configs = configs!)
-                .Map();
+    private static void GlobalErrorLog(ResultDetail? detail) {
+        //for GitHub action: https://github.com/HamidMolareza/Quera/issues/10
+        Environment.ExitCode = -1;
 
-        private static Task<Result<List<Problem>>> GetProblemsAsync() =>
-            TryExtensions.Try(() => Directory.GetDirectories(_arguments.SolutionsDirectory), _configs.NumOfTry)
-                .OnSuccess(problemDirs => problemDirs.SelectResults(GetProblemAsync))
-                .OnSuccess(problems => problems.Where(problem => problem is not null).ToList())!;
+        var sb = new StringBuilder("The operation failed. ");
+        if (detail is null)
+            sb.AppendLine("That's all we know!");
+        else
+            sb.AppendLine($"See the below text for more information:\n{detail.ToStr()}");
 
-        private static Task<Result<Problem?>> GetProblemAsync(string problemDir) =>
-            TryExtensions.Try(() => Directory.GetDirectories(problemDir), _configs.NumOfTry)
-                .OnSuccessFailWhen(solutionsDir => !solutionsDir.Any(),
-                    new ProblemDirectoryIsEmptyError(title: "ProblemDir is not valid",
-                        message: "There is no solution in the problem folder."))
-                .OnSuccess(GetSolutionsAsync)
-                .OnSuccess(solutions => {
-                    if (!solutions.Any())
-                        return null;
+        Log.Error("{message}", sb.ToString());
+    }
 
-                    return new Problem {
-                        Name = new FileInfo(problemDir).Name,
-                        Solutions = solutions,
-                        LastSolutionsCommit = solutions.GetLastCommitDateTime()
-                    };
-                }).OnFailAddMoreDetails(new {problemDir});
+    private static Task<int> InnerMain(string[] args) {
+        // Setup DI container
+        var services = new ServiceCollection();
 
-        private static Task<Result<List<Solution>>> GetSolutionsAsync(string[] languageDirs) =>
-            languageDirs.SelectResults(async languageDir =>
-                await GetLastCommitDateAsync(languageDir)
-                    .OnSuccess(lastCommitDate => new Solution {
-                        LanguageName = new FileInfo(languageDir).Name,
-                        LastCommitDate = lastCommitDate
-                    }).OnFail(e => {
-                        Console.WriteLine($"Warning! Error while get last commit of {languageDir}");
-                        Console.WriteLine($"More Data: {e.Detail?.GetHeaderOfError()}");
-                        Console.WriteLine("We skipped this error.\n");
-                        return Result<Solution>.Ok(new Solution());
-                    })
-            ).OnSuccess(solutions =>
-                solutions.Where(solution => !string.IsNullOrEmpty(solution.LanguageName))
-                    .ToList());
+        var appSettings = services.ConfigAppSettings("appsettings.json");
 
-        private static DateTime GetLastCommitDateTime(this IEnumerable<Solution> solutions) =>
-            solutions.Select(solution => solution.LastCommitDate)
-                .OrderByDescending(dateTime => dateTime)
-                .First();
+        ChangeWorkingDirectory(appSettings.WorkingDirectory);
 
-        private static Task SaveDataAsync(string outputDir, string readme, int numOfTry) =>
-            TryExtensions.Try(() =>
-                    File.WriteAllTextAsync(Path.Combine(outputDir, _configs.ReadmeFileName), readme), numOfTry)
-                .OnFailAddMoreDetails(new {outputDir});
+        ConfigSerilog(Utility.ParseLogLevel(appSettings.LogLevel));
 
-        private static async Task<string> CreateReadmeAsync(IEnumerable<Problem> problems) {
-            var problemsList = problems.ToList();
-            var result = new StringBuilder();
+        services.AddScoped<CollectorService>();
+        services.AddScoped<GeneratorService>();
+        services.AddScoped<AppRunner>();
 
-            var numOfQuestionsSolved = problemsList.Count;
-            result.AppendLine($"Number of problems solved: {problemsList.Count}\n");
+        Log.Debug("Services are registered.");
 
-            var numOfSolutions = problemsList.Sum(problem => problem.Solutions.Count);
-            if (numOfQuestionsSolved != numOfSolutions)
-                result.AppendLine($"Number of solutions: {numOfSolutions}\n");
+        var serviceProvider = services.BuildServiceProvider();
 
-            result.AppendLine("| Problem | Description | Solutions | Last commit |")
-                .AppendLine("| ----- | ----- | ----- | ----- |");
+        return InvokeCommandLine(args, appSettings, serviceProvider);
+    }
 
-            problemsList = problemsList.OrderByDescending(problem => problem.LastSolutionsCommit)
-                .ThenBy(problem => problem.Name)
-                .ToList();
+    private static void ConfigSerilog(LogEventLevel minimumLevel = LogEventLevel.Debug) {
+        Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Is(minimumLevel)
+            .WriteTo.Console(outputTemplate:
+                "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}")
+            .CreateLogger();
+    }
 
-            foreach (var problem in problemsList) {
-                Console.Write($"Processing problem {problem.Name}... ");
+    private static Task<int>
+        InvokeCommandLine(string[] args, AppSettings appSettings, IServiceProvider serviceProvider) {
+        // Define the options
+        var readmeTemplatePathOption = new Option<string>(
+            ["-t", "--readme-template"],
+            () => appSettings.ReadmeTemplatePath
+        );
 
-                result.AppendProblemData(problem)
-                    .OnFail(failedResult => failedResult.OnFailThrowException());
+        var outputOption = new Option<string>(
+            ["-o", "--output"],
+            () => appSettings.ReadmeOutputPath,
+            "The readme output path");
 
-                Console.WriteLine("Done");
-            }
+        var solutionsOption = new Option<string>(
+            ["-s", "--solutions"],
+            () => appSettings.SolutionsPath,
+            "The solutions directory");
 
-            var readmeTemplate =
-                await File.ReadAllTextAsync(Path.Combine(_arguments.ProgramDirectory, _configs.ReadmeTemplateName));
-            return readmeTemplate.Replace("{__REPLACE_FROM_PROGRAM_0__}", result.ToString());
+        // Create root command and add options
+        var rootCommand = new RootCommand {
+            readmeTemplatePathOption,
+            outputOption,
+            solutionsOption
+        };
+
+        // Set handler for root command
+        rootCommand.SetHandler(CommandHandler(serviceProvider),
+            readmeTemplatePathOption,
+            outputOption, solutionsOption
+        );
+
+        return rootCommand.InvokeAsync(args);
+    }
+
+    private static Func<string, string, string, Task> CommandHandler(IServiceProvider serviceProvider) {
+        return async (readmeTemplatePath, outputPath, solutionsPath) => {
+            var settings = await UpdateAppSettings(serviceProvider,
+                readmeTemplatePath, outputPath, solutionsPath);
+            Log.Debug("App Settings:\n{settings}", settings.ToString());
+
+            // Call other classes/methods with DI
+            var runner = serviceProvider.GetService<AppRunner>();
+            if (runner is null) throw new Exception("Can not get app runner from DI.");
+
+            var result = await runner.RunAsync();
+            GlobalErrorLog(result);
+        };
+    }
+
+    private static void ChangeWorkingDirectory(string workingDirectory) {
+        if (!string.IsNullOrEmpty(workingDirectory) && workingDirectory != ".")
+            Directory.SetCurrentDirectory(workingDirectory);
+    }
+
+    private static async Task<AppSettings> UpdateAppSettings(IServiceProvider serviceProvider, string readmeTemplatePath,
+        string outputPath, string solutionsPath) {
+        // Get AppSettings instance from DI
+        var settings = serviceProvider.GetService<AppSettings>();
+        if (settings is null) throw new Exception("Can not get app settings from DI.");
+        
+        settings.ReadmeTemplatePath = readmeTemplatePath;
+        settings.ReadmeOutputPath = outputPath;
+        settings.SolutionsPath = solutionsPath;
+
+        // Use the Gravatar image as default user profile
+        foreach (var user in settings.Users.Where(user => string.IsNullOrEmpty(user.AvatarUrl))) {
+            user.AvatarUrl = await GravatarHelper.GetGravatarUrlAsync(user.Email!);
         }
 
-        private static Result AppendProblemData(this StringBuilder source, Problem problem) =>
-            TryExtensions.Try(() => string.Format(_configs.LeetCodeProblemFormat, problem.Name))
-                .OnSuccess(link => {
-                    var solutionsUrl = string.Format(_configs.SolutionUrlFormat, problem.Name);
-                    var solutions = problem.Solutions.Select(solution => {
-                       var solutionUrl = Path.Combine(solutionsUrl, solution.LanguageName);
-                        return $"[{solution.LanguageName}]({solutionUrl})";
-                    });
-                    var solutionLinks = string.Join(" - ", solutions);
+        return settings;
+    }
 
-                    var lastCommitFormatted = problem.LastSolutionsCommit.ToString("dd-MM-yyyy");
-                    var readmeUrl = Path.Combine(solutionsUrl, "README.md");
-                    var line =
-                        $"| [{problem.Name.Replace("-", " ")}]({link}) | [Readme]({readmeUrl}) | {solutionLinks} | {lastCommitFormatted} |";
-                    source.AppendLine(line);
-                });
+    private static AppSettings ConfigAppSettings(this IServiceCollection services, string appSettingsPath) {
+        // Build Configuration from the provided appsettings.json path
+        var configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile(appSettingsPath, optional: false, reloadOnChange: true)
+            .Build();
 
-        private static Task<Result<DateTime>> GetLastCommitDateAsync(string path) =>
-            TryExtensions.Try(async () => await (Cli.Wrap("git").WithArguments($"log -1 --date=iso \"{path}\"")
-                                                 | Cli.Wrap("grep").WithArguments("^Date"))
-                    .ExecuteBufferedAsync())
-                .OnSuccess(cmd => {
-                    var result = cmd.StandardOutput.Remove(0, 8);
-                    return DateTime.Parse(result[..^7]);
-                }).OnFailAddMoreDetails(new {path});
+        // Bind AppSettings from Configuration
+        var appSettings = configuration.Get<AppSettings>() ?? new AppSettings();
+        services.AddSingleton(appSettings); // Register AppSettings as singleton
+        return appSettings;
     }
 }

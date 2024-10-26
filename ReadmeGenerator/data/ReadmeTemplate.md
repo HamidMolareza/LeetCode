@@ -21,7 +21,11 @@ can [send your solution](#contributing) (in any language).
 
 ## List of problems-solutions
 
+See the complete list in [this page](docs/CompleteList.md).
+
 {__REPLACE_FROM_PROGRAM_0__}
+
+See the complete list in [this page](docs/CompleteList.md).
 
 ## Usage
 
