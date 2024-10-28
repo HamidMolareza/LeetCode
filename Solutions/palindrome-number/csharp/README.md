@@ -1,27 +1,20 @@
-# About this solution
+# Intuition
+The problem asks whether a given integer is a palindrome, meaning it reads the same backward as forward. My first thought is to reverse the number and compare it to the original. However, reversing a number could introduce overflow issues, so a more efficient way would be to compare digits without fully reversing it.
 
-This solution has scored 100 in [LeetCode](https://leetcode.com).
+# Approach
+We can compare the digits from the beginning and the end towards the middle. Alternatively, an optimized approach avoids string conversion by reversing only half of the number.
 
-🌟 If you like this solution, please give it a star.
+- First, we handle edge cases: if the number is negative or ends with 0 (except for 0 itself), it can't be a palindrome.
+- Then, we reverse half of the number and compare it with the other half. If they are equal, it's a palindrome.
 
-### Solution1 - Using ToString()
+# Complexity
+- Time complexity:  
+  `O(log10(n))` - We divide the input number by 10 every iteration, so the time complexity depends on the number of digits.
 
-This is a simple and fast algorithm.
+- Space complexity:  
+  `O(1)` - We only use a few variables for comparisons and reversing the digits.
 
-### Solution2 - Using Mathematical Operations
+# Other Solutions
+An alternate solution would convert the number to a string and use two-pointer comparison from both ends. However, this involves additional space for string conversion and isn't as optimal as the mathematical approach.
 
-It calculates the inverse number by mathematical operations, which may be interesting, but it is slower than the first algorithm.
-
-## Support
-
-Reach out to the maintainer at one of the following places:
-
-- [GitHub issues](https://github.com/HamidMolareza/LeetCode/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+)
-
-## Authors & contributors
-
-The original setup of this repository is by [Hamid Molareza](https://github.com/HamidMolareza).
-
-## License
-
-This solution is licensed under the [GPLv3](https://choosealicense.com/licenses/gpl-3.0/).
+> This text is written by ChatGPT.

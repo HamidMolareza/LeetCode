@@ -1,12 +1,22 @@
-# LeetCode Problems
+<div align="center">
+  <h1>LeetCode Problems</h1>
+  <br />
+  <a href="#Problems-and-Solutions"><strong>Getting Started »</strong></a>
+  <br />
+  <br />
+  <a href="https://github.com/HamidMolareza/LeetCode/issues/new?assignees=&labels=help%20wanted&template=02_SOLVE_REQUEST.md&title=solve%20request%3A+">
+  Request to solve a new question</a> -
+  <a href="https://github.com/HamidMolareza/LeetCode/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">
+  Ask a Question</a>
+</div>
 
-<a href="https://github.com/HamidMolareza/LeetCode/issues/new?assignees=&labels=help%20wanted&template=02_SOLVE_REQUEST.md&title=solve%20request%3A+">
-Request to solve a new question</a> -
-<a href="https://github.com/HamidMolareza/LeetCode/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">
-Ask a Question</a>
+<div align="center">
+<br />
 
 ![GitHub](https://img.shields.io/github/license/HamidMolareza/LeetCode)
 [![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/HamidMolareza/LeetCode/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+
+</div>
 
 ## About
 
@@ -19,7 +29,7 @@ All the solutions that are here, get full score (100) in LeetCode. But that does
 In [this section](#list-of-problems-solutions) you can see the solutions, And if you want, you
 can [send your solution](#contributing) (in any language).
 
-## List of problems-solutions
+## Problems and Solutions
 
 See the complete list in [this page](docs/CompleteList.md).
 
@@ -34,6 +44,20 @@ Number of solutions: **59**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/palindrome-number">palindrome number</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/typescript">typescript</a></td>
+    <td>28-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a> <a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/two-sum">two sum</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/typescript">typescript</a></td>
+    <td>28-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a> <a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string">find the index of the first occurrence in a string</a></td>
@@ -141,13 +165,6 @@ Number of solutions: **59**
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
-    <td><a href="https://leetcode.com/problems/palindrome-number">palindrome number</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/typescript">typescript</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp">csharp</a></td>
-    <td>14-01-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
     <td><a href="https://leetcode.com/problems/valid-parentheses">valid parentheses</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/README.md">Readme</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/typescript">typescript</a></td>
@@ -167,13 +184,6 @@ Number of solutions: **59**
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/csharp">csharp</a></td>
     <td>07-01-2023</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/two-sum">two sum</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/typescript">typescript</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp">csharp</a></td>
-    <td>03-01-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/project-employees-II">project employees II</a></td>
@@ -410,9 +420,7 @@ Reach out to the maintainer at one of the following places:
 ## Features
 
 - Automatic readme generation
-- Clean code
-- Documentation
-- Our structure support multi-language
+- Support multi-language
 - CI/CD with GitHub action
 
 ## Contributing

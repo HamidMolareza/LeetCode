@@ -1,25 +1,19 @@
-# About this solution
+# Intuition
+The problem asks for two numbers from the given array that add up to a specific target. My first thought is to efficiently track the numbers we have seen so far, so we can quickly find the pair that sums up to the target.
 
-This solution has scored 100 in [LeetCode](https://leetcode.com).
+# Approach
+We can use a **hash map** (dictionary) to store the complement of the current number (i.e., `target - nums[i]`). As we iterate through the array, for each element, we check if the complement already exists in the hash map. If it does, we have found the pair. If not, we add the current element to the map and continue.
 
-🌟 If you like this solution, please give it a star.
+This approach ensures that we only traverse the array once, making it more efficient than a brute-force solution.
 
-### Solution 1:
-Complexity: O(n)
+# Complexity
+- Time complexity:  
+  `O(n)` - We traverse the array once, and each lookup or insertion in the hash map takes `O(1)` time.
 
-### Solution 2:
-Complexity: O(n^2)
+- Space complexity:  
+  `O(n)` - In the worst case, we store all elements in the hash map.
 
-## Support
+# Other Solutions
+A **brute-force** solution would involve two nested loops, checking all pairs of numbers to see if their sum equals the target. However, this has a time complexity of `O(n^2)` and is not suitable for large input sizes, making it less efficient.
 
-Reach out to the maintainer at one of the following places:
-
-- [GitHub issues](https://github.com/HamidMolareza/LeetCode/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+)
-
-## Authors & contributors
-
-The original setup of this repository is by [Hamid Molareza](https://github.com/HamidMolareza).
-
-## License
-
-This solution is licensed under the [GPLv3](https://choosealicense.com/licenses/gpl-3.0/).
+> This text is written by ChatGPT.
