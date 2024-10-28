@@ -16,15 +16,15 @@ public class AppRunner(
     GeneratorService generator,
     ILogger<AppRunner> logger) {
     public async Task<Result> RunAsync() {
-        Directory.SetCurrentDirectory(settings.WorkingDirectory);
-        
+        Utility.SetWorkingDirectory(settings.WorkingDirectory);
+
         logger.LogDebug("App Settings:\n{settings}", settings.ToString());
-        
+
         // Use the Gravatar image as default user profile
         foreach (var user in settings.Users.Where(user => string.IsNullOrEmpty(user.AvatarUrl))) {
             user.AvatarUrl = await GravatarHelper.GetGravatarUrlAsync(user.Email!);
         }
-        
+
         if (!EnsureInputsAreValid(out var validationResult))
             return validationResult;
         logger.LogDebug("App setting values checked.");

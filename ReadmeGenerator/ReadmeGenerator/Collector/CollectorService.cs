@@ -16,7 +16,8 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
             .OnSuccess(() => Directory.GetDirectories(settings.SolutionsPath))
             .OnSuccessTee(problemDirs => logger.LogDebug("{Count} problems found.", problemDirs.Length))
             .OnSuccess(problemDirs => problemDirs.SelectResults(CollectProblemAsync))
-            .OnSuccessTee(problems => logger.LogDebug("{Count} problems and solutions collected from hard.", problems.Count))
+            .OnSuccessTee(problems =>
+                logger.LogDebug("{Count} problems and solutions collected from hard.", problems.Count))
             .OnSuccessTee(() => logger.LogDebug("Data joined with cache data."))!;
 
     private Task<Result<Problem?>> CollectProblemAsync(string problemDir) =>

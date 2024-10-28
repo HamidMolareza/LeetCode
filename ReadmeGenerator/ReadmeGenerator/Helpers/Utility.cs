@@ -20,4 +20,10 @@ public static class Utility {
     public static string CombineStrings(string separator, params string?[] strings) {
         return string.Join(separator, strings.Where(s => !string.IsNullOrWhiteSpace(s)));
     }
+
+    public static void SetWorkingDirectory(string path) {
+        if (!string.IsNullOrWhiteSpace(path) && path != ".") {
+            Directory.SetCurrentDirectory(path);
+        }
+    }
 }
