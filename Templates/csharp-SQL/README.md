@@ -1,75 +1,8 @@
 # About this solution
 
+This solution has scored 100 in [LeetCode](https://leetcode.com).
+
 🌟 If you like this solution, please give it a star.
-
-## How Run?
-
-1. `dotnet build`
-2. `dotnet run`
-
-## Where is EF Core solution?
-
-see [program.cs](Program.cs) file.
-
-## Database
-
-This program uses a **memory** database by default. If you want, use another database.
-
-### Supported Databases:
-
-- Postgres
-- MySQL
-- SqlServer
-- Memory
-
-### How Change Database
-
-1. Open the [AppSettings file](AppSettings.json). (this is a json file)
-
-2. Change `DatabaseType` key to desired database (look [Supported Databases](#supported-databases))
-
-3. Update `ConnectionString` key
-
-4. Run your database service or Use docker compose files in [Docker-Compose directory](Docker-Compose)
-
-### Example for postgres database
-
-1. Update `AppSettings.json` to
-```json
-{
-  "DatabaseType": "postgres",
-  "ConnectionString": "Host=localhost;Port=35000;Username=postgres;Password=postgres;Database=LeetCode"
-}
-```
-
-2. `docker-compose -f Docker-Compose/postgres.yml up`
-
-3. [Run program](#how-run)
-
-> Note: If necessary, you can change the desired docker-compose file information. For example, port 35000 is used by default, which you can change to another number.
-
-### Sample ConnectionStrings:
-
-- Postgres:
-`"Host=localhost;Port=35000;Username=postgres;Password=postgres;Database=LeetCode"`
-- SQL Server:
-  - `Server=localhost,35000;Database=LeetCode;User Id=SA;Password=thisIsMssql@Password;`
-  - [Link](https://www.connectionstrings.com/sql-server/)
-- MySQL: 
-`server=localhost;port=35000;user=root;password=mysql;database=LeetCode`
-
-
-## File Structure
-
-- [Program.cs](Program.cs) (`Solution` and `Main` methods)
-- [Data](Data)
-  - AppSettings.cs (loading the program settings)
-  - ProblemContext (Database context, `DbSet` properties, `SeedData`, etc)
-- [Docker-Compose](Docker-Compose) (docker compose for database)
-- [Models](Models) (Database models)
-- [AppSettings.json](AppSettings.json)
-- [Runtime.cs](RunTime.cs) (Print runtime of process)
-- [Utility.js](Utility.cs)
 
 ## Support
 

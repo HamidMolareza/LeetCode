@@ -6,14 +6,14 @@
 
 # Complexity
 - Time complexity:
-<!-- Add your time complexity here, e.g. `O(n)` -->
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
 
 - Space complexity:
-<!-- Add your space complexity here, e.g. `O(n)` -->
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->
 
 # Other Solutions
-<!-- Briefly explain the solution and why it is not the best solution -->
 
 # Code
+```csharp []
 
-<!-- Your Code -->
+```

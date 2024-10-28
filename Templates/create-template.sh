@@ -1,127 +1,145 @@
 #!/bin/bash
 
-#functions:
-exit_if_operation_failed() {
-  if [ "$1" != 0 ]; then
-    echo "Error! Operation exit with code $1: $2"
+show_help() {
+  cat <<EOF
+Usage: $(basename "$0") [options]
+
+Options:
+  -p, --problem     Problem Slug (required)
+  -t, --template    Template directory (optional)
+  -i, --ide         IDE (e.g. code, rider) (optional)
+  -o, --output      Solutions directory (optional, default: Solutions or ../Solutions)
+  -h, --help        Display this help message
+
+Example:
+  $(basename "$0") -p two-sum -t /path/to/template -i code
+EOF
+  exit 0
+}
+
+# Functions:
+exit_if_failed() {
+  if [ "$1" -ne 0 ]; then
+    echo "Error! Operation failed with code $1: $2"
     exit "$1"
   fi
 }
 
-warning_if_operation_failed() {
-  if [ "$1" != 0 ]; then
-    echo "Warning! Operation exit with code $1: $2"
+warn_if_failed() {
+  if [ "$1" -ne 0 ]; then
+    echo "Warning! Operation failed with code $1: $2"
   fi
 }
 
-create_dir_if_is_not_exist() {
-  if [ ! -d "$1" ]; then
-    mkdir "$1"
-  fi
+create_dir_if_missing() {
+  [ ! -d "$1" ] && mkdir -p "$1"
 }
 
-validate_problem_name() {
-  problem_name="$1"
-
-  printf "Validating problem name... "
-  status_code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 https://leetcode.com/problems/$problem_name/)
-  if [ "$status_code" != "200" ] && [ "$status_code" != "302" ]; then
-    echo "Error! It seems that the name is not valid. (Id: $problem_name, status code: $status_code)"
-    return 1
-  fi
-  echo "done."
-}
-
-ensure_ide_is_valid() {
-  ide="$1"
-  if ! command -v "$ide" &>/dev/null; then
-    echo "the ide command could not be found. (Ide: $ide)"
+ensure_command_exists() {
+  command -v "$1" &>/dev/null || {
+    echo "Command not found: $1"
     exit 1
+  }
+}
+
+ask_ignore_error() {
+  if [ "$?" -ne 0 ]; then
+    read -rp "Do you want to ignore this error? (Y/n) " ignore_error
+    [[ "$ignore_error" =~ ^[nN]$ ]] && exit 1
   fi
 }
+
+get_default_solution_dir() {
+  for dir in "Solutions" "../Solutions"; do
+    [ -d "$dir" ] && echo "$dir" && return
+  done
+  echo ""  # Not Found
+}
+
 #===========================================================
-# Get Inputs
-problem_name="$1"
-if [ -z "$problem_name" ]; then
-  printf "Problem name (slug): "
-  read -r problem_name
-fi
-validate_problem_name "$problem_name"
-if [ "$?" != 0 ]; then
-  printf "Do you want to ignore this error?(Y/n) "
-  read -r ignore_error
-  if [ "$ignore_error" = 'n' ] || [ "$ignore_error" = 'N' ]; then
-    exit 0
-  fi
+# Parse Command-Line Options
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -p|--problem)
+      problem_slug="$2"
+      shift 2
+      ;;
+    -t|--template)
+      template_dir="$2"
+      shift 2
+      ;;
+    -o|--output)
+      solutions_dir="$2"
+      shift 2
+      ;;
+    -i|--ide)
+      ide="$2"
+      shift 2
+      ;;
+    -h|--help)
+      show_help
+      ;;
+    *)
+      echo "Unknown option: $1"
+      show_help
+      ;;
+  esac
+done
+
+#===========================================================
+# Validate Inputs
+[ -z "$problem_slug" ] && { echo "Error: Problem slug is required."; show_help; }
+
+if [ -n "$template_dir" ] && [ ! -d "$template_dir" ]; then
+  echo "Invalid template path: $template_dir"
+  exit 1;
 fi
 
-templateDir="$2"
-if [ -z "$templateDir" ]; then
-  if [ ! -d "$templateDir" ]; then
-    printf "template directory: "
-    read -r templateDir
-  fi
-fi
-if [ ! -d "$templateDir" ]; then
-  echo "Error! Can not find template dir in $templateDir"
+solutions_dir="${solutions_dir:-$(get_default_solution_dir)}"
+if [ -z "$solutions_dir" ] || [ ! -d "$solutions_dir" ]; then
+  echo "Solutions directory not found: $solutions_dir"
   exit 1
 fi
 
-ide="$3"
-if [ -z "$ide" ]; then
-  printf "Ide: "
-  read -r ide
+if [ -n "$ide" ]; then
+  ensure_command_exists "$ide"
 fi
-ensure_ide_is_valid "$ide"
 
-solutions_dir="$4"
-if [ -z "$solutions_dir" ]; then
-  solutions_dir="../Solutions"
-  if [ ! -d "$solutions_dir" ]; then
-    printf "Solutions directory: "
-    read -r solutions_dir
-  fi
-fi
-if [ ! -d "$solutions_dir" ]; then
-  echo "Error! Can not find solutions dir in $solutions_dir"
-  exit 1
-fi
 #===========================================================
 
-#checkout
-git checkout -b "$problem_name"
-exit_if_operation_failed "$?" "Can not checkout to $problem_name"
+# Checkout a new branch
+git checkout -b "$problem_slug"
+exit_if_failed "$?" "Unable to checkout to branch $problem_slug"
 
-#create solution dir
-create_dir_if_is_not_exist "$solutions_dir/$problem_name"
+# Create solution directory
+target_solution_dir="$solutions_dir/$problem_slug"
+create_dir_if_missing "$target_solution_dir"
 
-#copy template to solution dir
-result_dir="$solutions_dir/$problem_name"
-cp -r "$templateDir" "$result_dir"
-exit_if_operation_failed "$?" "Can not copy template from $templateDir to $result_dir"
-wait
+# Copy template to solution directory
+if [ -n "$template_dir" ]; then
+  cp -r "$template_dir" "$target_solution_dir"
+  exit_if_failed "$?" "Failed to copy template to $target_solution_dir"
+fi
 
 #Create README file for question text
-questionText="$result_dir/README.md"
-if [ ! -f "$questionText" ]; then
-  echo 'Copy the question text here.' >"$questionText"
-  echo "Please copy the question text to $questionText"
+problem_description="$target_solution_dir/README.md"
+if [ ! -f "$problem_description" ]; then
+  echo 'Copy the question text here.' >"$problem_description"
+  echo "Please copy the question text to $problem_description"
 fi
 
-echo "Directory is ready: $result_dir"
-$ide "$result_dir" >/dev/null
-warning_if_operation_failed "$?" "Can not open your ide for $result_dir"
+echo "Directory is ready: $target_solution_dir"
 
-echo ""
-printf "Do you want merge this branch to master branch?(y/N) "
-read -r merge_confirm
-if [ "$merge_confirm" = 'y' ] || [ "$merge_confirm" = 'Y' ]; then
-  ./merge-into-master-branch.sh "$problem_name" "y"
+if [ -n "$ide" ]; then
+  "$ide" "$target_solution_dir"
+  sleep 3s; wait
+  "$ide" "$problem_description"
+  
+  warn_if_failed "$?" "Failed to open IDE for $target_solution_dir"
 fi
 
-printf "Do you want push master branch?(y/N) "
-read -r push_confirm
-if [ "$push_confirm" = 'y' ] || [ "$push_confirm" = 'Y' ]; then
-  git pull --rebase
-  git push
+# Push to master branch (optional)
+read -rp "Do you want to push to the master branch (with merge flag)? (y/N) " push_confirm
+if [[ "$push_confirm" =~ ^[yY]$ ]]; then
+  git pull --no-rebase && git push
 fi
