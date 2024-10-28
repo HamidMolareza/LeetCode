@@ -46,6 +46,13 @@ Number of solutions: **59**
     <th>Contributors</th>
   </tr>
   <tr>
+    <td><a href="https://leetcode.com/problems/palindrome-number">palindrome number</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/typescript">typescript</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp">csharp</a></td>
+    <td>28-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a> <a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
     <td><a href="https://leetcode.com/problems/two-sum">two sum</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/README.md">Readme</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/typescript">typescript</a></td>
@@ -156,13 +163,6 @@ Number of solutions: **59**
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-array/csharp">csharp</a></td>
     <td>15-01-2023</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/palindrome-number">palindrome number</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/typescript">typescript</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp">csharp</a></td>
-    <td>14-01-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/valid-parentheses">valid parentheses</a></td>
