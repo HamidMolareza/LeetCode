@@ -7,7 +7,7 @@
     volumes:
       - ../.git:/app/data/.git
       - ../Solutions:/app/data/Solutions
-      - ./ReadmeGenerator/appsettings.json:/appsettings.json
+      - ./ReadmeGenerator/appsettings.json:/app/appsettings.json
       - ../README.md:/app/data/README.md:rw
       - ./ReadmeGenerator/data/ReadmeTemplate.md:/app/data/ReadmeTemplate.md
       - ../docs/CompleteList.md:/app/data/CompleteList.md:rw
