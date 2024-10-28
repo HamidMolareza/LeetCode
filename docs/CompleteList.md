@@ -15,6 +15,13 @@ Number of solutions: **59**
     <th>Contributors</th>
   </tr>
   <tr>
+    <td><a href="https://leetcode.com/problems/two-sum">two sum</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/typescript">typescript</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp">csharp</a></td>
+    <td>28-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a> <a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
     <td><a href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string">find the index of the first occurrence in a string</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-the-index-of-the-first-occurrence-in-a-string/README.md">Readme</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-the-index-of-the-first-occurrence-in-a-string/csharp">csharp</a></td>
@@ -146,13 +153,6 @@ Number of solutions: **59**
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/csharp">csharp</a></td>
     <td>07-01-2023</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/two-sum">two sum</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/typescript">typescript</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp">csharp</a></td>
-    <td>03-01-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/project-employees-II">project employees II</a></td>
