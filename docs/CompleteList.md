@@ -4,7 +4,7 @@ Go to [main page](../README.md).
 
 Number of problems solved: **45**
 
-Number of solutions: **59**
+Number of solutions: **60**
 
 <table>
   <tr>
@@ -13,6 +13,27 @@ Number of solutions: **59**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/valid-parentheses">valid parentheses</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/typescript">typescript</a></td>
+    <td>28-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a> <a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/roman-to-integer">roman to integer</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/csharp">csharp</a></td>
+    <td>28-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a> <a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/longest-common-prefix">longest common prefix</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/csharp">csharp</a></td>
+    <td>28-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a> <a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/palindrome-number">palindrome number</a></td>
@@ -132,27 +153,6 @@ Number of solutions: **59**
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-array/csharp">csharp</a></td>
     <td>15-01-2023</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/valid-parentheses">valid parentheses</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/typescript">typescript</a></td>
-    <td>13-01-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/longest-common-prefix">longest common prefix</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/csharp">csharp</a></td>
-    <td>09-01-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/roman-to-integer">roman to integer</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/csharp">csharp</a></td>
-    <td>07-01-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/project-employees-II">project employees II</a></td>
