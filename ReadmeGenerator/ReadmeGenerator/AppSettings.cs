@@ -1,9 +1,8 @@
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Text;
+using ReadmeGenerator.Settings;
 
-namespace ReadmeGenerator.Configs;
+namespace ReadmeGenerator;
 
 public class AppSettings {
     public string SolutionUrlFormat { get; set; } = default!;

@@ -1,40 +1,44 @@
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using OnRail;
 using OnRail.Extensions.Map;
 using OnRail.Extensions.OnSuccess;
 using OnRail.ResultDetails.Errors;
 using ReadmeGenerator.Collector;
 using ReadmeGenerator.Collector.Models;
-using ReadmeGenerator.Configs;
 using ReadmeGenerator.Generator;
 using ReadmeGenerator.Helpers;
-using Serilog;
 
 namespace ReadmeGenerator;
 
 public class AppRunner(
     AppSettings settings,
     CollectorService collector,
-    GeneratorService generator
-) {
+    GeneratorService generator,
+    ILogger<AppRunner> logger) {
     public async Task<Result> RunAsync() {
+        Directory.SetCurrentDirectory(settings.WorkingDirectory);
+        
+        logger.LogDebug("App Settings:\n{settings}", settings.ToString());
+        
+        // Use the Gravatar image as default user profile
+        foreach (var user in settings.Users.Where(user => string.IsNullOrEmpty(user.AvatarUrl))) {
+            user.AvatarUrl = await GravatarHelper.GetGravatarUrlAsync(user.Email!);
+        }
+        
         if (!EnsureInputsAreValid(out var validationResult))
             return validationResult;
-        Log.Debug("App setting values checked.");
+        logger.LogDebug("App setting values checked.");
 
         // Collect problems and solutions
         var problemsResult = await collector.CollectProblemsFromDiskAsync();
         if (!problemsResult.IsSuccess)
             return problemsResult.Map();
         if (problemsResult.Value is null) {
-            Log.Warning("No problem and solution found!");
+            logger.LogWarning("No problem and solution found!");
             return Result.Ok();
         }
 
-        Log.Information("{Count} problems collected from disk.", problemsResult.Value.Count);
+        logger.LogInformation("{Count} problems collected from disk.", problemsResult.Value.Count);
 
         // Order problems
         var problems = problemsResult.Value

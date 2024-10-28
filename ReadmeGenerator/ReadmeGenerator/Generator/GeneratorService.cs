@@ -1,13 +1,9 @@
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Text;
 using OnRail;
 using OnRail.Extensions.OnFail;
 using OnRail.Extensions.OnSuccess;
 using OnRail.Extensions.Try;
 using ReadmeGenerator.Collector.Models;
-using ReadmeGenerator.Configs;
 
 namespace ReadmeGenerator.Generator;
 

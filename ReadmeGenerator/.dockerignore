@@ -1,9 +1,4 @@
-bin
-obj
-CHANGELOG.md
-.idea
-.vscode
-**/.dockerignore
+﻿**/.dockerignore
 **/.env
 **/.git
 **/.gitignore
@@ -28,5 +23,3 @@ CHANGELOG.md
 **/values.dev.yaml
 LICENSE
 README.md
-Data
-appsettings.json

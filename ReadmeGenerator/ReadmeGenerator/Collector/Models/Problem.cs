@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace ReadmeGenerator.Collector.Models;
 
 public class Problem {

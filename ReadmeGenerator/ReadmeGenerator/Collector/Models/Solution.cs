@@ -1,5 +1,3 @@
-using System;
-
 namespace ReadmeGenerator.Collector.Models;
 
 public class Solution {

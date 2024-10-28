@@ -1,4 +1,4 @@
-namespace ReadmeGenerator.Configs;
+namespace ReadmeGenerator.Settings;
 
 public class UserModel {
     public string? Email { get; set; } = null!;

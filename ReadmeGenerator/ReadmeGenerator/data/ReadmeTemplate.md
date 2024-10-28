@@ -1,12 +1,22 @@
-# LeetCode Problems
+<div align="center">
+  <h1>LeetCode Problems</h1>
+  <br />
+  <a href="#Problems-and-Solutions"><strong>Getting Started »</strong></a>
+  <br />
+  <br />
+  <a href="https://github.com/HamidMolareza/LeetCode/issues/new?assignees=&labels=help%20wanted&template=02_SOLVE_REQUEST.md&title=solve%20request%3A+">
+  Request to solve a new question</a> -
+  <a href="https://github.com/HamidMolareza/LeetCode/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">
+  Ask a Question</a>
+</div>
 
-<a href="https://github.com/HamidMolareza/LeetCode/issues/new?assignees=&labels=help%20wanted&template=02_SOLVE_REQUEST.md&title=solve%20request%3A+">
-Request to solve a new question</a> -
-<a href="https://github.com/HamidMolareza/LeetCode/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">
-Ask a Question</a>
+<div align="center">
+<br />
 
 ![GitHub](https://img.shields.io/github/license/HamidMolareza/LeetCode)
 [![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/HamidMolareza/LeetCode/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+
+</div>
 
 ## About
 
@@ -19,7 +29,7 @@ All the solutions that are here, get full score (100) in LeetCode. But that does
 In [this section](#list-of-problems-solutions) you can see the solutions, And if you want, you
 can [send your solution](#contributing) (in any language).
 
-## List of problems-solutions
+## Problems and Solutions
 
 See the complete list in [this page](docs/CompleteList.md).
 
@@ -82,9 +92,7 @@ Reach out to the maintainer at one of the following places:
 ## Features
 
 - Automatic readme generation
-- Clean code
-- Documentation
-- Our structure support multi-language
+- Support multi-language
 - CI/CD with GitHub action
 
 ## Contributing
