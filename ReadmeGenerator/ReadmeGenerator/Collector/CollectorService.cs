@@ -59,7 +59,10 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
     private Task<Result<List<Contributor?>>> JoinWithSettingsData(List<Contributor> contributors) {
         return contributors.SelectResults(async contributor => {
             var user = settings.Users.SingleOrDefault(user =>
-                string.Equals(user.Email, contributor.Email, StringComparison.CurrentCultureIgnoreCase));
+                user.Emails.Any(email => string.Equals(email,
+                    contributor.Email, StringComparison.CurrentCultureIgnoreCase)
+                )
+            );
             if (user is null) {
                 logger.LogDebug("User config not found for {email}", contributor.Email);
 

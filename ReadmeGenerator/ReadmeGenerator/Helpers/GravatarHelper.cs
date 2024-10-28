@@ -6,6 +6,15 @@ namespace ReadmeGenerator.Helpers;
 public static class GravatarHelper {
     private const string GravatarBaseUrl = "https://www.gravatar.com/avatar/";
 
+    public static async Task<string?> GetGravatarUrlAsync(List<string> emails) {
+        foreach (var email in emails) {
+            var gravatarUrl = await GetGravatarUrlAsync(email);
+            if (!string.IsNullOrWhiteSpace(gravatarUrl)) return gravatarUrl;
+        }
+
+        return null;
+    }
+
     public static async Task<string?> GetGravatarUrlAsync(string email) {
         if (string.IsNullOrWhiteSpace(email))
             return null;

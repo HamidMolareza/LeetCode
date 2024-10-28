@@ -22,7 +22,7 @@ public class AppRunner(
 
         // Use the Gravatar image as default user profile
         foreach (var user in settings.Users.Where(user => string.IsNullOrEmpty(user.AvatarUrl))) {
-            user.AvatarUrl = await GravatarHelper.GetGravatarUrlAsync(user.Email!);
+            user.AvatarUrl = await GravatarHelper.GetGravatarUrlAsync(user.Emails);
         }
 
         if (!EnsureInputsAreValid(out var validationResult))
