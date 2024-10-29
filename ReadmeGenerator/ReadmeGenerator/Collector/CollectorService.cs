@@ -72,12 +72,17 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
         return contributors.SelectResults(async contributor => {
             var user = FindUser(contributor.Email, settings.Users);
             if (user is null) {
-                logger.LogDebug("User config not found for {email}", contributor.Email);
+                logger.LogWarning("User config not found for {email}", contributor.Email);
 
                 // Use the Gravatar image as default user profile
                 contributor.AvatarUrl =
                     await Utility.GetDefaultImageAsync(contributor.Email, [], settings.DefaultUserProfile!);
-                logger.LogDebug("The gravatar url was set for this user profile: {url}", contributor.AvatarUrl);
+
+                // Cache data in memory
+                settings.Users.Add(new UserModel {
+                    PrimaryEmail = contributor.Email,
+                    AvatarUrl = contributor.AvatarUrl,
+                });
 
                 return contributor;
             }
