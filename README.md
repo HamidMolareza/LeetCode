@@ -35,7 +35,7 @@ See the complete list in [this page](docs/CompleteList.md).
 
 Number of problems solved: **45**
 
-Number of solutions: **62**
+Number of solutions: **64**
 
 <table>
   <tr>
@@ -44,6 +44,20 @@ Number of solutions: **62**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/merge-sorted-array">merge sorted array</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/typescript">typescript</a></td>
+    <td>29-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/climbing-stairs">climbing stairs</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/typescript">typescript</a></td>
+    <td>29-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/add-binary">add binary</a></td>
@@ -130,24 +144,10 @@ Number of solutions: **62**
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
-    <td><a href="https://leetcode.com/problems/merge-sorted-array">merge sorted array</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/typescript">typescript</a></td>
-    <td>12-02-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
     <td><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list">remove duplicates from sorted list</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-list/README.md">Readme</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-list/csharp">csharp</a></td>
     <td>06-02-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/climbing-stairs">climbing stairs</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/typescript">typescript</a></td>
-    <td>04-02-2023</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
