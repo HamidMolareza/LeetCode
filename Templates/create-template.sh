@@ -6,13 +6,14 @@ Usage: $(basename "$0") [options]
 
 Options:
   -p, --problem     Problem Slug (required)
+  -c, --code        Problem Code (required)
   -t, --template    Template directory (optional)
   -i, --ide         IDE (e.g. code, rider) (optional)
   -o, --output      Solutions directory (optional, default: Solutions or ../Solutions)
   -h, --help        Display this help message
 
 Example:
-  $(basename "$0") -p two-sum -t /path/to/template -i code
+  $(basename "$0") -p two-sum -c 1 -t /path/to/template -i code
 EOF
   exit 0
 }
@@ -56,12 +57,48 @@ get_default_solution_dir() {
   echo ""  # Not Found
 }
 
+# Function to retrieve HTML, extract an element with XPath, and convert to Markdown
+html_to_markdown() {
+    local url="$1"
+    local output_path="$2"
+
+    # Step 1: Retrieve the HTML page with curl
+    local html_content
+    html_content=$(curl -s "$url")
+    if [ $? -ne 0 ]; then
+        echo "Error: Failed to fetch the HTML page."
+        return 1
+    fi
+
+    # Step 2: Extract the element with XPath using xmllint
+    local extracted_html
+    extracted_html=$(echo "$html_content" | xmllint --html --xpath '/html/body/div[5]' - 2>/dev/null)
+    if [ $? -ne 0 ]; then
+        echo "Error: XPath extraction failed. Element not found."
+        return 1
+    fi
+
+    # Step 3: Convert the extracted HTML to Markdown using pandoc
+    echo "$extracted_html" | pandoc -f html -t markdown -o "$output_path"
+    if [ $? -ne 0 ]; then
+        echo "Error: Failed to convert HTML to Markdown."
+        return 1
+    fi
+
+    echo "Markdown content saved to $output_path"
+    return 0
+}
+
 #===========================================================
 # Parse Command-Line Options
 while [[ $# -gt 0 ]]; do
   case "$1" in
     -p|--problem)
       problem_slug="$2"
+      shift 2
+      ;;
+    -c|--code)
+      problem_code="$2"
       shift 2
       ;;
     -t|--template)
@@ -89,6 +126,7 @@ done
 #===========================================================
 # Validate Inputs
 [ -z "$problem_slug" ] && { echo "Error: Problem slug is required."; show_help; }
+[ -z "$problem_code" ] && { echo "Error: Problem code is required."; show_help; }
 
 if [ -n "$template_dir" ] && [ ! -d "$template_dir" ]; then
   echo "Invalid template path: $template_dir"
@@ -124,8 +162,7 @@ fi
 #Create README file for question text
 problem_description="$target_solution_dir/README.md"
 if [ ! -f "$problem_description" ]; then
-  echo 'Copy the question text here.' >"$problem_description"
-  echo "Please copy the question text to $problem_description"
+  html_to_markdown "https://leetcode.ca/all/$problem_code.html" "$problem_description"
 fi
 
 echo "Directory is ready: $target_solution_dir"
