@@ -19,35 +19,35 @@ Number of solutions: **60**
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/README.md">Readme</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/typescript">typescript</a></td>
     <td>28-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a> <a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/roman-to-integer">roman to integer</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/README.md">Readme</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/csharp">csharp</a></td>
     <td>28-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a> <a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/longest-common-prefix">longest common prefix</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/README.md">Readme</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/csharp">csharp</a></td>
     <td>28-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a> <a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/palindrome-number">palindrome number</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/README.md">Readme</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/typescript">typescript</a></td>
     <td>28-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a> <a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="7 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/two-sum">two sum</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/README.md">Readme</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/typescript">typescript</a></td>
     <td>28-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a> <a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string">find the index of the first occurrence in a string</a></td>
