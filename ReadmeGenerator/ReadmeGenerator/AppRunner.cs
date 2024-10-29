@@ -21,11 +21,11 @@ public class AppRunner(
 
         logger.LogDebug("App Settings:\n{settings}", settings.ToString());
 
-        await ConfigUserSettings();
-
         if (!EnsureInputsAreValid(out var validationResult))
             return validationResult;
         logger.LogDebug("App setting values checked.");
+
+        await ConfigUserSettings();
 
         // Collect problems and solutions
         var problemsResult = await collector.CollectProblemsFromDiskAsync();
@@ -53,7 +53,7 @@ public class AppRunner(
             // Use the Gravatar image as default user profile
             user.AvatarUrl = await GravatarHelper.GetGravatarUrlAsync(
                 [user.PrimaryEmail, ..user.AliasEmails]);
-            
+
             // Use default user image if need
             if (string.IsNullOrWhiteSpace(user.AvatarUrl))
                 user.AvatarUrl = settings.DefaultUserProfile;
@@ -98,12 +98,19 @@ public class AppRunner(
                     message: $"The solutions directory is not valid. ({settings.SolutionsPath})"));
             return false;
         }
-        
+
         var usersWithoutPrimaryEmail = settings.Users.Count(user => string.IsNullOrWhiteSpace(user.PrimaryEmail));
         if (usersWithoutPrimaryEmail > 0) {
             result = Result.Fail(new ValidationError(
                 message:
                 $"{nameof(UserModel.PrimaryEmail)} is required for users in app settings. {usersWithoutPrimaryEmail} users have not the {nameof(UserModel.PrimaryEmail)}")
+            );
+            return false;
+        }
+
+        if (string.IsNullOrWhiteSpace(settings.DefaultUserProfile)) {
+            result = Result.Fail(new ValidationError(
+                message: $"'{nameof(settings.DefaultUserProfile)}' can not be null or empty.")
             );
             return false;
         }

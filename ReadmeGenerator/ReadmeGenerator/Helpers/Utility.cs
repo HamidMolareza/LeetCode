@@ -60,4 +60,20 @@ public static class Utility {
 
         return new Regex($"^{regexPattern}$", RegexOptions.IgnoreCase);
     }
+
+    public static async Task<string> GetDefaultImageAsync(string primaryEmail, IEnumerable<string> aliasEmails,
+        string defaultImageUrl) {
+        ArgumentNullException.ThrowIfNull(primaryEmail);
+        ArgumentNullException.ThrowIfNull(defaultImageUrl);
+
+        // Use the Gravatar image as default user profile
+        var avatarUrl = await GravatarHelper.GetGravatarUrlAsync(
+            [primaryEmail, ..aliasEmails]);
+
+        // Use default user image if need
+        if (string.IsNullOrWhiteSpace(avatarUrl))
+            avatarUrl = defaultImageUrl;
+
+        return avatarUrl;
+    }
 }

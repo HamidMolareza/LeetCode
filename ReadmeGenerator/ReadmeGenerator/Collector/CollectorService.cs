@@ -75,7 +75,8 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
                 logger.LogDebug("User config not found for {email}", contributor.Email);
 
                 // Use the Gravatar image as default user profile
-                contributor.AvatarUrl = await GravatarHelper.GetGravatarUrlAsync(contributor.Email);
+                contributor.AvatarUrl =
+                    await Utility.GetDefaultImageAsync(contributor.Email, [], settings.DefaultUserProfile!);
                 logger.LogDebug("The gravatar url was set for this user profile: {url}", contributor.AvatarUrl);
 
                 return contributor;
