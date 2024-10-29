@@ -10,7 +10,7 @@ public class AppSettings {
     public string ReadmeTemplatePath { get; set; } = default!;
     public string ReadmeOutputPath { get; set; } = default!;
     public int NumberOfTry { get; set; }
-    public List<string> IgnoreSolutions { get; init; } = [];
+    public List<string> IgnoreFolders { get; init; } = [];
 
     public string WorkingDirectory { get; set; } = default!;
     public string SolutionsPath { get; set; } = default!;

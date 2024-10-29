@@ -14,15 +14,15 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
     public Task<Result<List<Problem>>> CollectProblemsFromDiskAsync() =>
         GitHelper.MakeDirectorySafe(".")
             .OnSuccessTee(result => logger.LogDebug("{result}", result))
-            .OnSuccess(() => Directory.GetDirectories(settings.SolutionsPath))
-            .OnSuccessTee(problemDirs => logger.LogDebug("{Count} problems found.", problemDirs.Length))
+            .OnSuccess(() => Utility.GetValidFolders(settings.SolutionsPath, settings.IgnoreFolders))
+            .OnSuccessTee(problemDirs => logger.LogDebug("{Count} problems found.", problemDirs.Count))
             .OnSuccess(problemDirs => problemDirs.SelectResults(CollectProblemAsync))
             .OnSuccessTee(problems =>
                 logger.LogDebug("{Count} problems and solutions collected from hard.", problems.Count))
             .OnSuccessTee(() => logger.LogDebug("Data joined with cache data."))!;
 
     private Task<Result<Problem?>> CollectProblemAsync(string problemDir) =>
-        GetValidSolutionDirs(problemDir, settings.IgnoreSolutions, settings.NumberOfTry)
+        TryExtensions.Try(() => Utility.GetValidFolders(problemDir, settings.IgnoreFolders))
             .OnSuccess(CollectSolutionsAsync)
             .OnSuccess(async solutions => {
                 if (solutions.Count == 0) {
@@ -103,15 +103,6 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
 
     private static bool IsEmailEqual(string email1, string email2) =>
         string.Equals(email1, email2, StringComparison.CurrentCultureIgnoreCase);
-
-    private static Result<IEnumerable<string>> GetValidSolutionDirs(string problemDir,
-        IEnumerable<string> ignoreSolutions, int numOfTry) =>
-        TryExtensions.Try(() => Directory.GetDirectories(problemDir), numOfTry)
-            .OnSuccess(solutions =>
-                solutions.Where(solution => IsSolutionNameValid(new FileInfo(solution).Name, ignoreSolutions)));
-
-    private static bool IsSolutionNameValid(string solutionName, IEnumerable<string> ignoreSolutions)
-        => !solutionName.StartsWith('.') && ignoreSolutions.All(ignoreSolution => ignoreSolution != solutionName);
 
     private static Task<Result<List<Solution>>> CollectSolutionsAsync(IEnumerable<string> languageDirs) =>
         languageDirs.SelectResults(languageDir =>
