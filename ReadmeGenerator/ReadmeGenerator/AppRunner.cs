@@ -20,10 +20,7 @@ public class AppRunner(
 
         logger.LogDebug("App Settings:\n{settings}", settings.ToString());
 
-        // Use the Gravatar image as default user profile
-        foreach (var user in settings.Users.Where(user => string.IsNullOrEmpty(user.AvatarUrl))) {
-            user.AvatarUrl = await GravatarHelper.GetGravatarUrlAsync(user.Emails);
-        }
+        await ConfigUserSettings();
 
         if (!EnsureInputsAreValid(out var validationResult))
             return validationResult;
@@ -48,6 +45,14 @@ public class AppRunner(
 
         // Generate readme files and save it
         return await GenerateReadmeFiles(problems);
+    }
+
+    private async Task ConfigUserSettings() {
+        foreach (var user in settings.Users.Where(user => string.IsNullOrWhiteSpace(user.AvatarUrl))) {
+            // Use the Gravatar image as default user profile
+            user.AvatarUrl = await GravatarHelper.GetGravatarUrlAsync(
+                [user.PrimaryEmail, ..user.AliasEmails]);
+        }
     }
 
     private async Task<Result> GenerateReadmeFiles(List<Problem> problems) {

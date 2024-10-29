@@ -6,6 +6,7 @@ using OnRail.Extensions.SelectResults;
 using OnRail.Extensions.Try;
 using ReadmeGenerator.Collector.Models;
 using ReadmeGenerator.Helpers;
+using ReadmeGenerator.Settings;
 
 namespace ReadmeGenerator.Collector;
 
@@ -51,18 +52,25 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
     private Task<Result<List<Contributor>>>
         CollectContributorsAsync(string problemDir) =>
         GitHelper.GetContributorsAsync(problemDir)
-            .OnSuccess(JoinWithSettingsData)
-            .OnSuccess(contributors =>
-                contributors.Where(c => c is not null).ToList()
-            )!;
+            .OnSuccess(JoinWithSettingsDataAsync)
+            .OnSuccess(Utility.RemoveNullItems)
+            .OnSuccess(CombineDuplicateContributors);
 
-    private Task<Result<List<Contributor?>>> JoinWithSettingsData(List<Contributor> contributors) {
+    private static List<Contributor> CombineDuplicateContributors(List<Contributor> contributorList) =>
+        contributorList.GroupBy(c => c.Email)
+            .Select(g => new Contributor(
+                    g.First().Name,
+                    g.Key,
+                    g.Sum(c => c.NumOfCommits)
+                ) {
+                    AvatarUrl = g.First().AvatarUrl,
+                    ProfileUrl = g.First().ProfileUrl
+                }
+            ).ToList();
+
+    private Task<Result<List<Contributor?>>> JoinWithSettingsDataAsync(List<Contributor> contributors) {
         return contributors.SelectResults(async contributor => {
-            var user = settings.Users.SingleOrDefault(user =>
-                user.Emails.Any(email => string.Equals(email,
-                    contributor.Email, StringComparison.CurrentCultureIgnoreCase)
-                )
-            );
+            var user = FindUser(contributor.Email, settings.Users);
             if (user is null) {
                 logger.LogDebug("User config not found for {email}", contributor.Email);
 
@@ -78,12 +86,23 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
                 return null;
             }
 
+            contributor.Email = user.PrimaryEmail;
             contributor.AvatarUrl = user.AvatarUrl;
             contributor.ProfileUrl = user.ProfileUrl;
 
             return contributor;
         });
     }
+
+    private static UserModel? FindUser(string contributorEmail, IEnumerable<UserModel> settingsUsers) {
+        return settingsUsers.SingleOrDefault(user => {
+            return IsEmailEqual(contributorEmail, user.PrimaryEmail)
+                   || user.AliasEmails.Any(aliasEmail => IsEmailEqual(aliasEmail, contributorEmail));
+        });
+    }
+
+    private static bool IsEmailEqual(string email1, string email2) =>
+        string.Equals(email1, email2, StringComparison.CurrentCultureIgnoreCase);
 
     private static Result<IEnumerable<string>> GetValidSolutionDirs(string problemDir,
         IEnumerable<string> ignoreSolutions, int numOfTry) =>

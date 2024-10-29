@@ -26,4 +26,8 @@ public static class Utility {
             Directory.SetCurrentDirectory(path);
         }
     }
+
+    public static List<T> RemoveNullItems<T>(this IEnumerable<T?> contributors) {
+        return contributors.Where(c => c is not null).ToList()!;
+    }
 }

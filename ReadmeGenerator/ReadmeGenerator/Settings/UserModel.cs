@@ -1,8 +1,9 @@
 namespace ReadmeGenerator.Settings;
 
 public class UserModel {
-    public List<string> Emails { get; set; } = null!;
-    public string? AvatarUrl { get; set; } = null!;
-    public string? ProfileUrl { get; set; } = null!;
+    public string PrimaryEmail { get; set; } = default!;
+    public List<string> AliasEmails { get; init; } = [];
+    public string? AvatarUrl { get; set; }
+    public string? ProfileUrl { get; set; } = default!;
     public bool Ignore { get; set; }
 }

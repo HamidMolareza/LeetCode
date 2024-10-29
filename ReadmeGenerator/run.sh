@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker_name="${1:-console-sharp}"
+docker_name="${1:-readme-generator}"
 
 clear
 
