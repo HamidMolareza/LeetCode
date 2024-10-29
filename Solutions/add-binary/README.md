@@ -10,7 +10,6 @@ Given two binary strings **a** and **b**, return their sum as a binary string.
     Input: a = "1010", b = "1011"
     Output: "10101"
 
-
 Constraints:
 
 - 1 <= a.length, b.length <= 104
