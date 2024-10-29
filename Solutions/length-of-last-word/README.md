@@ -2,7 +2,7 @@ Given a string `s` consisting of words and spaces, return the length of the **la
 
 A **word** is a maximal substring consisting of non-space characters only.
 
- 
+
 
 **Example 1:**
 
@@ -22,11 +22,10 @@ A **word** is a maximal substring consisting of non-space characters only.
     Output: 6
     Explanation: The last word is "joyboy" with length 6.
 
- 
+
 
 Constraints:
 
 - 1 <= s.length <= 104
 - s consists of only English letters and spaces ' '.
 - There will be at least one word in s.
-
