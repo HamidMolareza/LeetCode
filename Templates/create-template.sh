@@ -169,9 +169,6 @@ echo "Directory is ready: $target_solution_dir"
 
 if [ -n "$ide" ]; then
   "$ide" "$target_solution_dir"
-  sleep 3s; wait
-  "$ide" "$problem_description"
-  
   warn_if_failed "$?" "Failed to open IDE for $target_solution_dir"
 fi
 
