@@ -4,7 +4,7 @@ Go to [main page](../README.md).
 
 Number of problems solved: **45**
 
-Number of solutions: **60**
+Number of solutions: **62**
 
 <table>
   <tr>
@@ -13,6 +13,20 @@ Number of solutions: **60**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/add-binary">add binary</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/typescript">typescript</a></td>
+    <td>29-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/length-of-last-word">length of last word</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/typescript">typescript</a></td>
+    <td>29-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/valid-parentheses">valid parentheses</a></td>
@@ -113,25 +127,11 @@ Number of solutions: **60**
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
-    <td><a href="https://leetcode.com/problems/add-binary">add binary</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/typescript">typescript</a></td>
-    <td>28-01-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
     <td><a href="https://leetcode.com/problems/plus-one">plus one</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/plus-one/README.md">Readme</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/plus-one/csharp">csharp</a></td>
     <td>27-01-2023</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/length-of-last-word">length of last word</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/typescript">typescript</a></td>
-    <td>27-01-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/search-insert-position">search insert position</a></td>
