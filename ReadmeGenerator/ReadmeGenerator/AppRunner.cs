@@ -7,6 +7,7 @@ using ReadmeGenerator.Collector;
 using ReadmeGenerator.Collector.Models;
 using ReadmeGenerator.Generator;
 using ReadmeGenerator.Helpers;
+using ReadmeGenerator.Settings;
 
 namespace ReadmeGenerator;
 
@@ -91,6 +92,15 @@ public class AppRunner(
             result = Result.Fail(
                 new ValidationError(
                     message: $"The solutions directory is not valid. ({settings.SolutionsPath})"));
+            return false;
+        }
+        
+        var usersWithoutPrimaryEmail = settings.Users.Count(user => string.IsNullOrWhiteSpace(user.PrimaryEmail));
+        if (usersWithoutPrimaryEmail > 0) {
+            result = Result.Fail(new ValidationError(
+                message:
+                $"{nameof(UserModel.PrimaryEmail)} is required for users in app settings. {usersWithoutPrimaryEmail} users have not the {nameof(UserModel.PrimaryEmail)}")
+            );
             return false;
         }
 
