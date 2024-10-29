@@ -21,6 +21,7 @@ public class AppSettings {
     public string? MainPageFooter { get; set; }
     public string CompleteListTemplatePath { get; set; } = default!;
     public string CompleteListOutputPath { get; set; } = default!;
+    public string? DefaultUserProfile { get; set; }
 
 
     public override string ToString() {

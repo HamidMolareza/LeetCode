@@ -53,6 +53,10 @@ public class AppRunner(
             // Use the Gravatar image as default user profile
             user.AvatarUrl = await GravatarHelper.GetGravatarUrlAsync(
                 [user.PrimaryEmail, ..user.AliasEmails]);
+            
+            // Use default user image if need
+            if (string.IsNullOrWhiteSpace(user.AvatarUrl))
+                user.AvatarUrl = settings.DefaultUserProfile;
         }
     }
 
