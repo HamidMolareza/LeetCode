@@ -35,7 +35,7 @@ See the complete list in [this page](docs/CompleteList.md).
 
 Number of problems solved: **45**
 
-Number of solutions: **64**
+Number of solutions: **85**
 
 <table>
   <tr>
@@ -46,144 +46,151 @@ Number of solutions: **64**
     <th>Contributors</th>
   </tr>
   <tr>
-    <td><a href="https://leetcode.com/problems/merge-sorted-array">merge sorted array</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/typescript">typescript</a></td>
-    <td>29-10-2024</td>
+    <td><a href="https://leetcode.com/problems/add-binary">add binary</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/typescript">typescript</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/binary-tree-inorder-traversal">binary tree inorder traversal</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/binary-tree-inorder-traversal/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/binary-tree-inorder-traversal/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/binary-tree-inorder-traversal/csharp">csharp</a></td>
+    <td>30-10-2024</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/climbing-stairs">climbing stairs</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/typescript">typescript</a></td>
-    <td>29-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/climbing-stairs/typescript">typescript</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
-    <td><a href="https://leetcode.com/problems/add-binary">add binary</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/add-binary/typescript">typescript</a></td>
-    <td>29-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+    <td><a href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string">find the index of the first occurrence in a string</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-the-index-of-the-first-occurrence-in-a-string/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-the-index-of-the-first-occurrence-in-a-string/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-the-index-of-the-first-occurrence-in-a-string/csharp">csharp</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/length-of-last-word">length of last word</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/typescript">typescript</a></td>
-    <td>29-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/valid-parentheses">valid parentheses</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/typescript">typescript</a></td>
-    <td>28-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/roman-to-integer">roman to integer</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/csharp">csharp</a></td>
-    <td>28-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/typescript">typescript</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/longest-common-prefix">longest common prefix</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/csharp">csharp</a></td>
-    <td>28-10-2024</td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/csharp">csharp</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/maximum-depth-of-binary-tree">maximum depth of binary tree</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/maximum-depth-of-binary-tree/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/maximum-depth-of-binary-tree/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/maximum-depth-of-binary-tree/typescript">typescript</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/merge-sorted-array">merge sorted array</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-sorted-array/typescript">typescript</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/merge-two-sorted-lists">merge two sorted lists</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-two-sorted-lists/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-two-sorted-lists/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-two-sorted-lists/csharp">csharp</a></td>
+    <td>30-10-2024</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/palindrome-number">palindrome number</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/typescript">typescript</a></td>
-    <td>28-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="7 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/two-sum">two sum</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/typescript">typescript</a></td>
-    <td>28-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string">find the index of the first occurrence in a string</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-the-index-of-the-first-occurrence-in-a-string/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-the-index-of-the-first-occurrence-in-a-string/csharp">csharp</a></td>
-    <td>16-03-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/maximum-depth-of-binary-tree">maximum depth of binary tree</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/maximum-depth-of-binary-tree/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/maximum-depth-of-binary-tree/typescript">typescript</a></td>
-    <td>18-02-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/symmetric-tree">symmetric tree</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/symmetric-tree/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/symmetric-tree/csharp">csharp</a></td>
-    <td>18-02-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/same-tree">same tree</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/typescript">typescript</a></td>
-    <td>16-02-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/binary-tree-inorder-traversal">binary tree inorder traversal</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/binary-tree-inorder-traversal/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/binary-tree-inorder-traversal/csharp">csharp</a></td>
-    <td>15-02-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list">remove duplicates from sorted list</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-list/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-list/csharp">csharp</a></td>
-    <td>06-02-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/sqrtx">sqrtx</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/sqrtx/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/sqrtx/csharp">csharp</a></td>
-    <td>29-01-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/palindrome-number/typescript">typescript</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="8 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/plus-one">plus one</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/plus-one/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/plus-one/csharp">csharp</a></td>
-    <td>27-01-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/search-insert-position">search insert position</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/csharp">csharp</a></td>
-    <td>22-01-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/remove-element">remove element</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-element/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-element/typescript">typescript</a></td>
-    <td>20-01-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/plus-one/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/plus-one/csharp">csharp</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array">remove duplicates from sorted array</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-array/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-array/csharp">csharp</a></td>
-    <td>15-01-2023</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-array/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-array/csharp">csharp</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list">remove duplicates from sorted list</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-list/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-list/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-duplicates-from-sorted-list/csharp">csharp</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/remove-element">remove element</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-element/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-element/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/remove-element/typescript">typescript</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/roman-to-integer">roman to integer</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/csharp">csharp</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/same-tree">same tree</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/typescript">typescript</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/search-insert-position">search insert position</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/csharp">csharp</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/sqrtx">sqrtx</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/sqrtx/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/sqrtx/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/sqrtx/csharp">csharp</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/symmetric-tree">symmetric tree</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/symmetric-tree/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/symmetric-tree/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/symmetric-tree/csharp">csharp</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/two-sum">two sum</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/two-sum/typescript">typescript</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="6 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/valid-parentheses">valid parentheses</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/txt">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/valid-parentheses/typescript">typescript</a></td>
+    <td>30-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/project-employees-II">project employees II</a></td>
@@ -352,13 +359,6 @@ Number of solutions: **64**
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/csharp-SQL">csharp-SQL</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/SQL">SQL</a></td>
     <td>18-09-2022</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="7 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/merge-two-sorted-lists">merge two sorted lists</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-two-sorted-lists/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/merge-two-sorted-lists/csharp">csharp</a></td>
-    <td>12-09-2022</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="1 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
 </table>
 
