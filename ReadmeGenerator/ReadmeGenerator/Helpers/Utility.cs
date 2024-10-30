@@ -76,7 +76,7 @@ public static class Utility {
 
         return avatarUrl;
     }
-    
+
     public static string? GetSingleFileName(string path) {
         // Check if the provided path is valid
         if (!Directory.Exists(path)) {
