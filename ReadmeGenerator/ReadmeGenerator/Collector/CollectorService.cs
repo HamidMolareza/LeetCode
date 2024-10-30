@@ -24,20 +24,23 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
     private Task<Result<Problem?>> CollectProblemAsync(string problemDir) =>
         TryExtensions.Try(() => Utility.GetValidFolders(problemDir, settings.IgnoreFolders))
             .OnSuccess(CollectSolutionsAsync)
-            .OnSuccess(async solutions => {
-                if (solutions.Count == 0) {
-                    logger.LogDebug("'{problemDir}' has not any valid solutions so skip it.", problemDir);
-                    return Result<Problem?>.Ok(null);
-                }
+            .OnSuccess(solutions => CollectProblemDataAsync(problemDir, solutions))
+            .OnFailAddMoreDetails(new { problemDir });
 
-                var problemName = new FileInfo(problemDir).Name;
+    private async Task<Result<Problem?>> CollectProblemDataAsync(string problemDir, List<Solution> solutions) {
+        if (solutions.Count == 0) {
+            logger.LogDebug("'{problemDir}' has not any valid solutions so skip it.", problemDir);
+            return Result<Problem?>.Ok(null);
+        }
 
-                return await GitHelper.GetLastCommitDateAsync(problemDir)
-                    .OnSuccess(lastCommitDate => CollectContributorsAsync(problemDir)
-                        .OnSuccess(contributors =>
-                            Result<Problem?>.Ok(CreateProblemObj(problemName, lastCommitDate, solutions, contributors))
-                        ));
-            }).OnFailAddMoreDetails(new { problemDir });
+        var problemName = new FileInfo(problemDir).Name;
+
+        return await GitHelper.GetLastCommitDateAsync(problemDir)
+            .OnSuccess(lastCommitDate => CollectContributorsAsync(problemDir)
+                .OnSuccess(contributors =>
+                    Result<Problem?>.Ok(CreateProblemObj(problemName, lastCommitDate, solutions, contributors))
+                ));
+    }
 
     private static Problem CreateProblemObj(string problemName, DateTime lastCommitDate, List<Solution> solutions,
         List<Contributor> contributors) {

@@ -11,10 +11,10 @@ public class GeneratorService(AppSettings settings) {
     public Result<StringBuilder> GenerateReadmeSection(List<Problem> problems, int? limit = null) =>
         TryExtensions.Try(() => limit is null or < 1 ? problems : problems.Take((int)limit).ToList())
             .OnSuccess(targetProblems =>
-                GenerateReadme(targetProblems, problems.Count, GetAllSolutions(problems))
+                GenerateReadme(targetProblems, problems.Count, CountSolutions(problems))
             );
 
-    private static int GetAllSolutions(IEnumerable<Problem> problems) =>
+    private static int CountSolutions(IEnumerable<Problem> problems) =>
         problems.Sum(p => p.Solutions.Count);
 
     private StringBuilder GenerateReadme(List<Problem> problems, int? allProblems = null,
@@ -24,7 +24,7 @@ public class GeneratorService(AppSettings settings) {
         var numberOfProblemsSolved = allProblems ?? problems.Count;
         readme.AppendLine($"Number of problems solved: **{numberOfProblemsSolved}**\n");
 
-        var numberOfSolutions = allSolutions ?? GetAllSolutions(problems);
+        var numberOfSolutions = allSolutions ?? CountSolutions(problems);
         if (numberOfProblemsSolved != numberOfSolutions)
             readme.AppendLine($"Number of solutions: **{numberOfSolutions}**\n");
 
