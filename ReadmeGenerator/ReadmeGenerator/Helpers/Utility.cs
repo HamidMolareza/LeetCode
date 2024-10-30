@@ -76,4 +76,19 @@ public static class Utility {
 
         return avatarUrl;
     }
+    
+    public static string? GetSingleFileName(string path) {
+        // Check if the provided path is valid
+        if (!Directory.Exists(path)) {
+            throw new DirectoryNotFoundException($"The directory '{path}' does not exist.");
+        }
+
+        // Get the files in the directory
+        var files = Directory.GetFiles(path);
+
+        // Check if there's exactly one file
+        return files.Length == 1
+            ? Path.GetFileName(files[0]) // Return the single file name
+            : null; // Return null if there are no files or more than one
+    }
 }

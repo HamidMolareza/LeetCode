@@ -1,11 +1,11 @@
 namespace ReadmeGenerator.Collector.Models;
 
 public class Solution {
-    private string _languageName = null!;
+    private readonly string _languageName = null!;
 
     public string LanguageName {
         get => _languageName;
-        set {
+        init {
             if (string.IsNullOrEmpty(value)) {
                 throw new ArgumentNullException($"{nameof(LanguageName)} can not be null or empty.");
             }
@@ -14,5 +14,10 @@ public class Solution {
         }
     }
 
-    public DateTime LastCommitDate { get; set; }
+    public DateTime LastCommitDate { get; init; }
+
+    /// <summary>
+    /// If the solution has only single file, this save the file name for ease-access
+    /// </summary>
+    public string? SingleFileName { get; set; }
 }

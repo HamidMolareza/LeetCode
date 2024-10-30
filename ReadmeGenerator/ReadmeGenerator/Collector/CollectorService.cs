@@ -115,7 +115,8 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
             GitHelper.GetLastCommitDateAsync(languageDir)
                 .OnSuccess(lastCommitDate => new Solution {
                     LanguageName = new FileInfo(languageDir).Name,
-                    LastCommitDate = lastCommitDate
+                    LastCommitDate = lastCommitDate,
+                    SingleFileName = Utility.GetSingleFileName(languageDir)
                 })
         );
 }

@@ -56,7 +56,7 @@ public class GeneratorService(AppSettings settings) {
                 .OrderByDescending(solution => solution.LastCommitDate)
                 .ThenBy(solution => solution.LanguageName)
                 .Select(solution => {
-                    var solutionUrl = Path.Combine(baseSolutionUrl, solution.LanguageName);
+                    var solutionUrl = GetSolutionUrl(solutionUrlFormat, baseSolutionUrl, solution);
 
                     return $"<a href=\"{solutionUrl}\">{new FileInfo(solution.LanguageName).Name}</a>";
                 });
@@ -83,4 +83,13 @@ public class GeneratorService(AppSettings settings) {
                 .AppendLine($"    <td>{contributorDiv}</td>")
                 .AppendLine("  </tr>");
         });
+
+    private static string GetSolutionUrl(string solutionUrlFormat, string baseSolutionUrl, Solution solution) {
+        var solutionPath = Path.Combine(baseSolutionUrl, solution.LanguageName);
+        if (!string.IsNullOrWhiteSpace(solution.SingleFileName))
+            solutionPath = Path.Combine(solutionPath, solution.SingleFileName);
+
+        var solutionUrl = string.Format(solutionUrlFormat, solutionPath);
+        return solutionUrl;
+    }
 }
