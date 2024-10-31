@@ -35,7 +35,7 @@ See the complete list in [this page](docs/CompleteList.md).
 
 Number of problems solved: **45**
 
-Number of solutions: **86**
+Number of solutions: **87**
 
 <table>
   <tr>
@@ -44,6 +44,20 @@ Number of solutions: **86**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/same-tree">same tree</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/txt/README.md">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/typescript">typescript</a></td>
+    <td>31-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/length-of-last-word">length of last word</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/txt/README.md">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/typescript">typescript</a></td>
+    <td>31-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/search-insert-position">search insert position</a></td>
@@ -86,13 +100,6 @@ Number of solutions: **86**
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-the-index-of-the-first-occurrence-in-a-string/txt/README.md">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-the-index-of-the-first-occurrence-in-a-string/csharp">csharp</a></td>
     <td>30-10-2024</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/length-of-last-word">length of last word</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/txt/README.md">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/length-of-last-word/typescript">typescript</a></td>
-    <td>30-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/longest-common-prefix">longest common prefix</a></td>
@@ -156,13 +163,6 @@ Number of solutions: **86**
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/txt/README.md">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/roman-to-integer/csharp">csharp</a></td>
     <td>30-10-2024</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/same-tree">same tree</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/txt/README.md">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/same-tree/typescript">typescript</a></td>
-    <td>30-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/sqrtx">sqrtx</a></td>
