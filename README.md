@@ -35,7 +35,7 @@ See the complete list in [this page](docs/CompleteList.md).
 
 Number of problems solved: **45**
 
-Number of solutions: **87**
+Number of solutions: **88**
 
 <table>
   <tr>
@@ -44,6 +44,13 @@ Number of solutions: **87**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/maximum-depth-of-binary-tree">maximum depth of binary tree</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/maximum-depth-of-binary-tree/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/maximum-depth-of-binary-tree/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/maximum-depth-of-binary-tree/txt/README.md">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/maximum-depth-of-binary-tree/typescript">typescript</a></td>
+    <td>31-10-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/same-tree">same tree</a></td>
@@ -107,13 +114,6 @@ Number of solutions: **87**
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/txt/README.md">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/longest-common-prefix/csharp">csharp</a></td>
     <td>30-10-2024</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
-  </tr>
-  <tr>
-    <td><a href="https://leetcode.com/problems/maximum-depth-of-binary-tree">maximum depth of binary tree</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/maximum-depth-of-binary-tree/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/maximum-depth-of-binary-tree/txt/README.md">txt</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/maximum-depth-of-binary-tree/typescript">typescript</a></td>
-    <td>30-10-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/merge-sorted-array">merge sorted array</a></td>
