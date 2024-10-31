@@ -38,8 +38,8 @@ public class GeneratorService(AppSettings settings) {
             .AppendLine("    <th>Contributors</th>")
             .AppendLine("  </tr>");
 
-        var featuredImageTag = !string.IsNullOrWhiteSpace(settings.FeaturedImage)
-            ? $"<img src=\"{settings.FeaturedImage}\" alt=\"*\" width=\"10%\" height=\"10%\">"
+        var featuredImageTag = !string.IsNullOrWhiteSpace(settings.FeaturedImage.Url)
+            ? $"<img src=\"{settings.FeaturedImage}\" alt=\"*\" width=\"{settings.FeaturedImage.Size}\" height=\"{settings.FeaturedImage.Size}\">"
             : string.Empty;
 
         foreach (var problem in problems) {

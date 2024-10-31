@@ -22,7 +22,7 @@ public class AppSettings {
     public string CompleteListTemplatePath { get; set; } = default!;
     public string CompleteListOutputPath { get; set; } = default!;
     public string? DefaultUserProfile { get; set; }
-    public string? FeaturedImage { get; set; }
+    public FeatureImageSetting FeaturedImage { get; set; } = default!;
 
 
     public override string ToString() {

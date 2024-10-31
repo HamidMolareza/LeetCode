@@ -85,6 +85,8 @@ public class AppRunner(
     }
 
     private bool EnsureInputsAreValid(out Result result) {
+        //TODO: Find better way
+        
         if (!File.Exists(settings.ReadmeTemplatePath)) {
             result = Result.Fail(
                 new ValidationError(
@@ -120,6 +122,14 @@ public class AppRunner(
         if (invalidProblemSettings) {
             result = Result.Fail(new ValidationError(
                 message: $"Problem names can not be empty or contains whitespace.")
+            );
+            return false;
+        }
+
+        if (settings.FeaturedImage == null! || string.IsNullOrWhiteSpace(settings.FeaturedImage.Url) ||
+            string.IsNullOrWhiteSpace(settings.FeaturedImage.Size)) {
+            result = Result.Fail(new ValidationError(
+                message: $"'{nameof(settings.FeaturedImage)}' is required.")
             );
             return false;
         }
