@@ -84,10 +84,10 @@ public static class Utility {
         }
 
         // Get the files in the directory
-        var files = Directory.GetFiles(path);
+        var files = Directory.EnumerateFileSystemEntries(path).ToList();
 
         // Check if there's exactly one file
-        return files.Length == 1
+        return files.Count == 1
             ? Path.GetFileName(files[0]) // Return the single file name
             : null; // Return null if there are no files or more than one
     }
