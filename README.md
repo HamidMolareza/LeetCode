@@ -48,7 +48,7 @@ Number of solutions: **86**
   <tr>
     <td><a href="https://leetcode.com/problems/search-insert-position">search insert position</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/csharp/Algorithm.sln">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/txt/README.md">txt</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/search-insert-position/txt/README.md">txt</a></td>
     <td>31-10-2024</td>
     <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="3 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
