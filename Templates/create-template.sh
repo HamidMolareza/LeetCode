@@ -89,6 +89,26 @@ html_to_markdown() {
     return 0
 }
 
+checkout_branch() {
+    local branch_name="$1"
+    
+    # Check if the branch name is provided
+    if [[ -z "$branch_name" ]]; then
+        echo "Error: No branch name provided."
+        return 1
+    fi
+
+    # Check if the branch exists
+    if git rev-parse --verify "$branch_name" &>/dev/null; then
+        echo "Switching to branch '$branch_name'..."
+        git checkout "$branch_name"
+    else
+        echo "Branch '$branch_name' does not exist. Creating it..."
+        git checkout -b "$branch_name"
+    fi
+}
+
+
 #===========================================================
 # Parse Command-Line Options
 while [[ $# -gt 0 ]]; do
@@ -149,7 +169,7 @@ problem_description="$target_solution_dir/README.md"
 [ -z "$problem_code" ] && [ ! -f "$problem_description" ] && { echo "Error: Problem code is required."; show_help; }
 
 # Checkout a new branch
-git checkout -b "$problem_slug"
+checkout_branch "$problem_slug"
 exit_if_failed "$?" "Unable to checkout to branch $problem_slug"
 
 create_dir_if_missing "$target_solution_dir"
