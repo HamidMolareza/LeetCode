@@ -126,7 +126,6 @@ done
 #===========================================================
 # Validate Inputs
 [ -z "$problem_slug" ] && { echo "Error: Problem slug is required."; show_help; }
-[ -z "$problem_code" ] && { echo "Error: Problem code is required."; show_help; }
 
 if [ -n "$template_dir" ] && [ ! -d "$template_dir" ]; then
   echo "Invalid template path: $template_dir"
@@ -144,13 +143,15 @@ if [ -n "$ide" ]; then
 fi
 
 #===========================================================
+target_solution_dir="$solutions_dir/$problem_slug"
+problem_description="$target_solution_dir/README.md"
+
+[ -z "$problem_code" ] && [ ! -f "$problem_description" ] && { echo "Error: Problem code is required."; show_help; }
 
 # Checkout a new branch
 git checkout -b "$problem_slug"
 exit_if_failed "$?" "Unable to checkout to branch $problem_slug"
 
-# Create solution directory
-target_solution_dir="$solutions_dir/$problem_slug"
 create_dir_if_missing "$target_solution_dir"
 
 # Copy template to solution directory
@@ -160,7 +161,6 @@ if [ -n "$template_dir" ]; then
 fi
 
 #Create README file for question text
-problem_description="$target_solution_dir/README.md"
 if [ ! -f "$problem_description" ]; then
   html_to_markdown "https://leetcode.ca/all/$problem_code.html" "$problem_description"
 fi
