@@ -103,7 +103,7 @@ public class AppRunner(
         if (usersWithoutPrimaryEmail > 0) {
             result = Result.Fail(new ValidationError(
                 message:
-                $"{nameof(UserModel.PrimaryEmail)} is required for users in app settings. {usersWithoutPrimaryEmail} users have not the {nameof(UserModel.PrimaryEmail)}")
+                $"{nameof(UserSetting.PrimaryEmail)} is required for users in app settings. {usersWithoutPrimaryEmail} users have not the {nameof(UserSetting.PrimaryEmail)}")
             );
             return false;
         }
@@ -111,6 +111,15 @@ public class AppRunner(
         if (string.IsNullOrWhiteSpace(settings.DefaultUserProfile)) {
             result = Result.Fail(new ValidationError(
                 message: $"'{nameof(settings.DefaultUserProfile)}' can not be null or empty.")
+            );
+            return false;
+        }
+
+        var invalidProblemSettings =
+            settings.Problems.Any(problem => string.IsNullOrWhiteSpace(problem.Name) || problem.Name.Contains(' '));
+        if (invalidProblemSettings) {
+            result = Result.Fail(new ValidationError(
+                message: $"Problem names can not be empty or contains whitespace.")
             );
             return false;
         }

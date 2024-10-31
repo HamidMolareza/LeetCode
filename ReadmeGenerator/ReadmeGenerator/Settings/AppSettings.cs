@@ -1,8 +1,7 @@
 using System.Reflection;
 using System.Text;
-using ReadmeGenerator.Settings;
 
-namespace ReadmeGenerator;
+namespace ReadmeGenerator.Settings;
 
 public class AppSettings {
     public string SolutionUrlFormat { get; set; } = default!;
@@ -15,13 +14,15 @@ public class AppSettings {
     public string WorkingDirectory { get; set; } = default!;
     public string SolutionsPath { get; set; } = default!;
 
-    public List<UserModel> Users { get; init; } = [];
+    public List<UserSetting> Users { get; init; } = [];
+    public List<ProblemSetting> Problems { get; init; } = [];
     public string LogLevel { get; set; } = default!;
     public int MainPageLimit { get; set; }
     public string? MainPageFooter { get; set; }
     public string CompleteListTemplatePath { get; set; } = default!;
     public string CompleteListOutputPath { get; set; } = default!;
     public string? DefaultUserProfile { get; set; }
+    public string? FeaturedImage { get; set; }
 
 
     public override string ToString() {

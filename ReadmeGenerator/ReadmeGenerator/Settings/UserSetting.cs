@@ -1,6 +1,6 @@
 namespace ReadmeGenerator.Settings;
 
-public class UserModel {
+public class UserSetting {
     public string PrimaryEmail { get; set; } = default!;
     public List<string> AliasEmails { get; init; } = [];
     public string? AvatarUrl { get; set; }

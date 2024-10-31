@@ -1,4 +1,5 @@
 using System.CommandLine;
+using ReadmeGenerator.Settings;
 
 namespace ReadmeGenerator;
 

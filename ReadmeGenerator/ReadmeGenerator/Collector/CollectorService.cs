@@ -19,7 +19,26 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
             .OnSuccess(problemDirs => problemDirs.SelectResults(CollectProblemAsync))
             .OnSuccessTee(problems =>
                 logger.LogDebug("{Count} problems and solutions collected from hard.", problems.Count))
-            .OnSuccessTee(() => logger.LogDebug("Data joined with cache data."))!;
+            .OnSuccess(JoinProblemsWithSettings!);
+
+    private Result<List<Problem>> JoinProblemsWithSettings(List<Problem> problems) =>
+        TryExtensions.Try(() => {
+            if (problems.Count == 0 || settings.Problems.Count == 0) return problems;
+
+            var query = from problem in problems
+                join problemSetting in settings.Problems on problem.Name.ToLower() equals
+                    problemSetting.Name.ToLower() into g
+                from problemSetting in g.DefaultIfEmpty()
+                where problem != null
+                select new Problem {
+                    Name = problem.Name,
+                    LastSolutionsCommit = problem.LastSolutionsCommit,
+                    Contributors = problem.Contributors,
+                    Solutions = problem.Solutions,
+                    Featured = problemSetting?.Featured ?? false
+                };
+            return query.ToList();
+        });
 
     private Task<Result<Problem?>> CollectProblemAsync(string problemDir) =>
         TryExtensions.Try(() => Utility.GetValidFolders(problemDir, settings.IgnoreFolders))
@@ -55,7 +74,7 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
     private Task<Result<List<Contributor>>>
         CollectContributorsAsync(string problemDir) =>
         GitHelper.GetContributorsAsync(problemDir)
-            .OnSuccess(JoinWithSettingsDataAsync)
+            .OnSuccess(JoinContributorWithSettingsAsync)
             .OnSuccess(Utility.RemoveNullItems)
             .OnSuccess(CombineDuplicateContributors);
 
@@ -71,7 +90,7 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
                 }
             ).ToList();
 
-    private Task<Result<List<Contributor?>>> JoinWithSettingsDataAsync(List<Contributor> contributors) {
+    private Task<Result<List<Contributor?>>> JoinContributorWithSettingsAsync(List<Contributor> contributors) {
         return contributors.SelectResults(async contributor => {
             var user = FindUser(contributor.Email, settings.Users);
             if (user is null) {
@@ -82,7 +101,7 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
                     await Utility.GetDefaultImageAsync(contributor.Email, [], settings.DefaultUserProfile!);
 
                 // Cache data in memory
-                settings.Users.Add(new UserModel {
+                settings.Users.Add(new UserSetting {
                     PrimaryEmail = contributor.Email,
                     AvatarUrl = contributor.AvatarUrl,
                 });
@@ -103,7 +122,7 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
         });
     }
 
-    private static UserModel? FindUser(string contributorEmail, IEnumerable<UserModel> settingsUsers) {
+    private static UserSetting? FindUser(string contributorEmail, IEnumerable<UserSetting> settingsUsers) {
         return settingsUsers.SingleOrDefault(user => {
             return IsEmailEqual(contributorEmail, user.PrimaryEmail)
                    || user.AliasEmails.Any(aliasEmail => IsEmailEqual(aliasEmail, contributorEmail));

@@ -6,6 +6,7 @@ using ReadmeGenerator;
 using ReadmeGenerator.Collector;
 using ReadmeGenerator.Generator;
 using ReadmeGenerator.Helpers;
+using ReadmeGenerator.Settings;
 
 var services = new ServiceCollection();
 

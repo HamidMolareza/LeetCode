@@ -4,6 +4,7 @@ using OnRail.Extensions.OnFail;
 using OnRail.Extensions.OnSuccess;
 using OnRail.Extensions.Try;
 using ReadmeGenerator.Collector.Models;
+using ReadmeGenerator.Settings;
 
 namespace ReadmeGenerator.Generator;
 
@@ -37,9 +38,14 @@ public class GeneratorService(AppSettings settings) {
             .AppendLine("    <th>Contributors</th>")
             .AppendLine("  </tr>");
 
+        var featuredImageTag = !string.IsNullOrWhiteSpace(settings.FeaturedImage)
+            ? $"<img src=\"{settings.FeaturedImage}\" alt=\"*\" width=\"10%\" height=\"10%\">"
+            : string.Empty;
+
         foreach (var problem in problems) {
-            var result = AppendProblemData(readme, problem, settings.SolutionUrlFormat, settings.ProblemUrlFormat);
-            result.OnFailThrowException();
+            AppendProblemData(readme, problem, settings.SolutionUrlFormat,
+                    settings.ProblemUrlFormat, featuredImageTag)
+                .OnFailThrowException();
         }
 
         readme.AppendLine("</table>");
@@ -48,32 +54,19 @@ public class GeneratorService(AppSettings settings) {
     }
 
     private static Result AppendProblemData(StringBuilder source,
-        Problem problem, string solutionUrlFormat, string problemUrlFormat) =>
+        Problem problem, string solutionUrlFormat, string problemUrlFormat, string featuredImageTag) =>
         TryExtensions.Try(() => {
             var baseSolutionUrl = string.Format(solutionUrlFormat, problem.Name);
-
-            var solutionLinks = problem.Solutions
-                .OrderByDescending(solution => solution.LastCommitDate)
-                .ThenBy(solution => solution.LanguageName)
-                .Select(solution => {
-                    var solutionUrl = GetSolutionUrl(baseSolutionUrl, solution.LanguageName, solution.SingleFileName);
-
-                    return $"<a href=\"{solutionUrl}\">{new FileInfo(solution.LanguageName).Name}</a>";
-                });
-            var solutionsSection = string.Join(" - ", solutionLinks);
-
-            var lastCommitFormatted = problem.LastSolutionsCommit.ToString("dd-MM-yyyy");
-            var url = string.Format(problemUrlFormat, problem.Name);
-
-            var contributorLinks = problem.Contributors
-                .OrderByDescending(contributor => contributor.NumOfCommits)
-                .Select(contributor =>
-                    $"<a href=\"{contributor.ProfileUrl}\" title=\"{contributor.NumOfCommits} commits\"><img src=\"{contributor.AvatarUrl}\" alt=\"{contributor.Name}\" style=\"border-radius:100%\" width=\"32px\" height=\"32px\"></a>");
-            var contributorDiv =
-                $"<div style=\"display: flex; flex-direction: row; gap: 2px;\">{string.Join(" ", contributorLinks)}</div>";
-
-            var problemLink = $"<a href=\"{url}\">{problem.DisplayName}</a>";
+            var solutionsSection = GenerateSolutionsSection(problem, baseSolutionUrl);
             var readmeUrl = $"<a href=\"{Path.Combine(baseSolutionUrl, "README.md")}\">Readme</a>";
+            var lastCommitFormatted = problem.LastSolutionsCommit.ToString("dd-MM-yyyy");
+
+            var url = string.Format(problemUrlFormat, problem.Name);
+            var problemLink = $"<a href=\"{url}\">{problem.DisplayName}</a>";
+            if (problem.Featured)
+                problemLink += $" {featuredImageTag}";
+
+            var contributorDiv = GenerateContributorSection(problem);
 
             source.AppendLine("  <tr>")
                 .AppendLine($"    <td>{problemLink}</td>")
@@ -83,6 +76,29 @@ public class GeneratorService(AppSettings settings) {
                 .AppendLine($"    <td>{contributorDiv}</td>")
                 .AppendLine("  </tr>");
         });
+
+    private static string GenerateContributorSection(Problem problem) {
+        var contributorLinks = problem.Contributors
+            .OrderByDescending(contributor => contributor.NumOfCommits)
+            .Select(contributor =>
+                $"<a href=\"{contributor.ProfileUrl}\" title=\"{contributor.NumOfCommits} commits\"><img src=\"{contributor.AvatarUrl}\" alt=\"{contributor.Name}\" style=\"border-radius:100%\" width=\"32px\" height=\"32px\"></a>");
+        var contributorDiv =
+            $"<div style=\"display: flex; flex-direction: row; gap: 2px;\">{string.Join(" ", contributorLinks)}</div>";
+        return contributorDiv;
+    }
+
+    private static string GenerateSolutionsSection(Problem problem, string baseSolutionUrl) {
+        var solutionLinks = problem.Solutions
+            .OrderByDescending(solution => solution.LastCommitDate)
+            .ThenBy(solution => solution.LanguageName)
+            .Select(solution => {
+                var solutionUrl = GetSolutionUrl(baseSolutionUrl, solution.LanguageName, solution.SingleFileName);
+
+                return $"<a href=\"{solutionUrl}\">{new FileInfo(solution.LanguageName).Name}</a>";
+            });
+        var solutionsSection = string.Join(" - ", solutionLinks);
+        return solutionsSection;
+    }
 
     private static string GetSolutionUrl(string baseSolutionUrl, string languageName, string? singleFileName) {
         var solutionUrl = Path.Combine(baseSolutionUrl, languageName);
