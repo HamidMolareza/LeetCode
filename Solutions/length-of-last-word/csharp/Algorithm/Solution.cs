@@ -1,11 +1,17 @@
 ﻿namespace Algorithm;
 
-public class Solution
-{
+public class Solution {
     public int LengthOfLastWord(string s) {
-        s = s.Trim(); // Trim leading and trailing spaces
-        int lastSpaceIndex = s.LastIndexOf(' ');
+        for (var i = s.Length - 1; i >= 0; i--) {
+            if (s[i] == ' ') continue;
 
-        return lastSpaceIndex == -1 ? s.Length : s.Length - lastSpaceIndex - 1;
+            for (var wordLength = i; wordLength >= 0; wordLength--) {
+                if (s[wordLength] == ' ') return i - wordLength;
+            }
+
+            return i + 1;
+        }
+
+        return -1;
     }
 }
