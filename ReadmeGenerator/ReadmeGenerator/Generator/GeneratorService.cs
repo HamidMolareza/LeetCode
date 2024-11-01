@@ -39,7 +39,7 @@ public class GeneratorService(AppSettings settings) {
             .AppendLine("  </tr>");
 
         var featuredImageTag = !string.IsNullOrWhiteSpace(settings.FeaturedImage.Url)
-            ? $"<img src=\"{settings.FeaturedImage.Url}\" alt=\"*\" width=\"{settings.FeaturedImage.Size}\" height=\"{settings.FeaturedImage.Size}\">"
+            ? $"<img src=\"{settings.FeaturedImage.Url}\" alt=\"*\" width=\"{settings.FeaturedImage.Width}\" height=\"{settings.FeaturedImage.Height}\">"
             : string.Empty;
 
         foreach (var problem in problems) {

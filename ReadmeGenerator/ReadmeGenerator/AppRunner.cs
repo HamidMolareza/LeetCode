@@ -86,7 +86,7 @@ public class AppRunner(
 
     private bool EnsureInputsAreValid(out Result result) {
         //TODO: Find better way
-        
+
         if (!File.Exists(settings.ReadmeTemplatePath)) {
             result = Result.Fail(
                 new ValidationError(
@@ -127,7 +127,8 @@ public class AppRunner(
         }
 
         if (settings.FeaturedImage == null! || string.IsNullOrWhiteSpace(settings.FeaturedImage.Url) ||
-            string.IsNullOrWhiteSpace(settings.FeaturedImage.Size)) {
+            string.IsNullOrWhiteSpace(settings.FeaturedImage.Width) ||
+            string.IsNullOrWhiteSpace(settings.FeaturedImage.Height)) {
             result = Result.Fail(new ValidationError(
                 message: $"'{nameof(settings.FeaturedImage)}' is required.")
             );
