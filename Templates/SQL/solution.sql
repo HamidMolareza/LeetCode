@@ -1,7 +1,7 @@
 -- Create Items
 
 
--- Write your Postgres query statement below
+-- Solution
 
 
 -- Remove Data
