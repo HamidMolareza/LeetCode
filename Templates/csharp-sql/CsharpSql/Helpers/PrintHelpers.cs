@@ -1,6 +1,6 @@
-namespace ConsoleApp; 
+namespace ConsoleSharpTemplate.Helpers;
 
-public static class Utility {
+public static class PrintHelpers {
     public static void Print(this IEnumerable<object> table) {
         var objects = table.ToList();
         var props = objects.First().GetType().GetProperties();

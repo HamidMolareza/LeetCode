@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.Text;
 
-namespace ConsoleApp;
+namespace ConsoleSharpTemplate.Helpers;
 
 public static class RunTime {
     public static TResult Print<TResult>(Func<TResult> func, string title) {
@@ -9,6 +9,19 @@ public static class RunTime {
         stopWatch.Start();
 
         var result = func();
+
+        stopWatch.Stop();
+        var elapsedTime = stopWatch.Elapsed.Format();
+        Console.WriteLine($"{title}: {elapsedTime}");
+
+        return result;
+    }
+    
+    public static async Task<TResult> Print<TResult>(Func<Task<TResult>> funcAsync, string title) {
+        var stopWatch = new Stopwatch();
+        stopWatch.Start();
+
+        var result = await funcAsync();
 
         stopWatch.Stop();
         var elapsedTime = stopWatch.Elapsed.Format();
