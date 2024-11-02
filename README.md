@@ -33,9 +33,9 @@ can [send your solution](#contributing) (in any language).
 
 See the complete list in [this page](docs/CompleteList.md).
 
-Number of problems solved: **24**
+Number of problems solved: **28**
 
-Number of solutions: **56**
+Number of solutions: **60**
 
 <table>
   <tr>
@@ -44,6 +44,34 @@ Number of solutions: **56**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/rising-temperature">rising temperature</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/rising-temperature/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/rising-temperature/csharp-sql">csharp-sql</a></td>
+    <td>02-11-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="5 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/delete-duplicate-emails">delete duplicate emails</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/delete-duplicate-emails/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/delete-duplicate-emails/csharp-sql">csharp-sql</a></td>
+    <td>02-11-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="7 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/customers-who-never-order">customers who never order</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customers-who-never-order/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/customers-who-never-order/csharp-sql">csharp-sql</a></td>
+    <td>02-11-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="6 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/duplicate-emails">duplicate emails</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/duplicate-emails/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/duplicate-emails/csharp-sql">csharp-sql</a></td>
+    <td>02-11-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="9 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/employees-earning-more-than-their-managers">employees earning more than their managers</a></td>
