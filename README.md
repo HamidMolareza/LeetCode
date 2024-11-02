@@ -48,9 +48,9 @@ Number of solutions: **56**
   <tr>
     <td><a href="https://leetcode.com/problems/employees-earning-more-than-their-managers">employees earning more than their managers</a></td>
     <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/README.md">Readme</a></td>
-    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/csharp-sql/CsharpSql">csharp-sql</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/csharp-sql">csharp-sql</a></td>
     <td>02-11-2024</td>
-    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="9 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="10 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/combine-two-tables">combine two tables</a></td>
