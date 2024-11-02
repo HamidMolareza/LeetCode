@@ -33,9 +33,9 @@ can [send your solution](#contributing) (in any language).
 
 See the complete list in [this page](docs/CompleteList.md).
 
-Number of problems solved: **22**
+Number of problems solved: **23**
 
-Number of solutions: **54**
+Number of solutions: **55**
 
 <table>
   <tr>
@@ -44,6 +44,13 @@ Number of solutions: **54**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/combine-two-tables">combine two tables</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/combine-two-tables/csharp-sql">csharp-sql</a></td>
+    <td>02-11-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="6 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree">convert sorted array to binary search tree</a></td>
