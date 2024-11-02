@@ -18,6 +18,7 @@ Console.WriteLine("Application Starting...");
 // return;
 // static IQueryable<object> Solution() {
 //     var db = new AppDbContext();
+
 //     var result = from person in db.People
 //         join address in db.Addresses
 //             on person.PersonId equals address.PersonId into addrGroup
@@ -28,5 +29,6 @@ Console.WriteLine("Application Starting...");
 //             City = address.City,
 //             State = address.State
 //         };
+
 //     return result;
 // }
