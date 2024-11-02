@@ -33,9 +33,9 @@ can [send your solution](#contributing) (in any language).
 
 See the complete list in [this page](docs/CompleteList.md).
 
-Number of problems solved: **23**
+Number of problems solved: **24**
 
-Number of solutions: **55**
+Number of solutions: **56**
 
 <table>
   <tr>
@@ -44,6 +44,13 @@ Number of solutions: **55**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/employees-earning-more-than-their-managers">employees earning more than their managers</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employees-earning-more-than-their-managers/csharp-sql/CsharpSql">csharp-sql</a></td>
+    <td>02-11-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="9 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/combine-two-tables">combine two tables</a></td>
