@@ -1,0 +1,7 @@
+﻿services:
+  csharp-sql:
+    image: csharp-sql
+    network_mode: host
+    build:
+      context: .
+      dockerfile: Dockerfile
