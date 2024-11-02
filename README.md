@@ -33,9 +33,9 @@ can [send your solution](#contributing) (in any language).
 
 See the complete list in [this page](docs/CompleteList.md).
 
-Number of problems solved: **28**
+Number of problems solved: **30**
 
-Number of solutions: **60**
+Number of solutions: **62**
 
 <table>
   <tr>
@@ -44,6 +44,20 @@ Number of solutions: **60**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/find-customer-referee">find customer referee</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-customer-referee/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/find-customer-referee/csharp-sql">csharp-sql</a></td>
+    <td>02-11-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/employee-bonus">employee bonus</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employee-bonus/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/employee-bonus/csharp-sql">csharp-sql</a></td>
+    <td>02-11-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="4 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="Hamid Molareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/rising-temperature">rising temperature</a></td>
