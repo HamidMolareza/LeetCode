@@ -48,7 +48,10 @@ public static class GitHelper {
                     var name = data[0];
                     var email = data[1][..^1];
 
-                    return new Contributor(name: name, email: email, numOfCommits: numOfCommits);
+                    return new Contributor(name) {
+                        Email = email,
+                        NumOfCommits = numOfCommits
+                    };
                 }).Where(contributor => contributor is not null).ToList())
             .OnFailAddMoreDetails(new { path, workingDirectory })!;
 }

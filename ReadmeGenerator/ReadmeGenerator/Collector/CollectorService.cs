@@ -19,25 +19,27 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
             .OnSuccess(problemDirs => problemDirs.SelectResults(CollectProblemAsync))
             .OnSuccessTee(problems =>
                 logger.LogDebug("{Count} problems and solutions collected from hard.", problems.Count))
-            .OnSuccess(JoinProblemsWithSettings!);
+            .OnSuccess(ApplyProblemSettings!);
 
-    private Result<List<Problem>> JoinProblemsWithSettings(List<Problem> problems) =>
+    private Result<List<Problem>> ApplyProblemSettings(List<Problem> problems) =>
         TryExtensions.Try(() => {
             if (problems.Count == 0 || settings.Problems.Count == 0) return problems;
 
-            var query = from problem in problems
-                join problemSetting in settings.Problems on problem.Name.ToLower() equals
-                    problemSetting.Name.ToLower() into g
-                from problemSetting in g.DefaultIfEmpty()
-                where problem != null
-                select new Problem {
-                    Name = problem.Name,
-                    LastSolutionsCommit = problem.LastSolutionsCommit,
-                    Contributors = problem.Contributors,
-                    Solutions = problem.Solutions,
-                    Featured = problemSetting?.Featured ?? false
-                };
-            return query.ToList();
+            foreach (var problem in problems) {
+                var problemSetting =
+                    settings.Problems.Find(problemSetting => string.Equals(problemSetting.Name, problem.Name,
+                        StringComparison.CurrentCultureIgnoreCase));
+                if (problemSetting is null) continue;
+
+                var settingContributors = problemSetting.Contributors.Select(c => new Contributor(c.UserName) {
+                    ProfileUrl = c.ProfileUrl,
+                    AvatarUrl = c.AvatarUrl
+                });
+                problem.Contributors.AddRange(settingContributors);
+                problem.Featured = problemSetting.Featured;
+            }
+
+            return problems;
         });
 
     private Task<Result<Problem?>> CollectProblemAsync(string problemDir) =>
@@ -80,11 +82,9 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
 
     private static List<Contributor> CombineDuplicateContributors(List<Contributor> contributorList) =>
         contributorList.GroupBy(c => c.Email)
-            .Select(g => new Contributor(
-                    g.First().Name,
-                    g.Key,
-                    g.Sum(c => c.NumOfCommits)
-                ) {
+            .Select(g => new Contributor(g.First().Name) {
+                    Email = g.Key,
+                    NumOfCommits = g.Sum(c => c.NumOfCommits),
                     AvatarUrl = g.First().AvatarUrl,
                     ProfileUrl = g.First().ProfileUrl
                 }
@@ -92,6 +92,8 @@ public class CollectorService(AppSettings settings, ILogger<CollectorService> lo
 
     private Task<Result<List<Contributor?>>> JoinContributorWithSettingsAsync(List<Contributor> contributors) {
         return contributors.SelectResults(async contributor => {
+            if (contributor.Email is null) return null!;
+
             var user = FindUser(contributor.Email, settings.Users);
             if (user is null) {
                 logger.LogWarning("User config not found for {email}", contributor.Email);

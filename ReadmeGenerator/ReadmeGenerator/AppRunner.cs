@@ -118,10 +118,15 @@ public class AppRunner(
         }
 
         var invalidProblemSettings =
-            settings.Problems.Any(problem => string.IsNullOrWhiteSpace(problem.Name) || problem.Name.Contains(' '));
+            settings.Problems.Any(problem => string.IsNullOrWhiteSpace(problem.Name) || problem.Name.Contains(' ')
+                || problem.Contributors.Any(c =>
+                    string.IsNullOrWhiteSpace(c.UserName)
+                    || string.IsNullOrWhiteSpace(c.AvatarUrl)
+                    || string.IsNullOrWhiteSpace(c.ProfileUrl))
+            );
         if (invalidProblemSettings) {
             result = Result.Fail(new ValidationError(
-                message: $"Problem names can not be empty or contains whitespace.")
+                message: $"'{nameof(settings.Problems)}' are not valid.")
             );
             return false;
         }

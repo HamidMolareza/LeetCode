@@ -57,15 +57,15 @@ public class GeneratorService(AppSettings settings) {
         Problem problem, string solutionUrlFormat, string problemUrlFormat, string featuredImageTag) =>
         TryExtensions.Try(() => {
             var baseSolutionUrl = string.Format(solutionUrlFormat, problem.Name);
-            var solutionsSection = GenerateSolutionsSection(problem, baseSolutionUrl);
-            var readmeUrl = $"<a href=\"{Path.Combine(baseSolutionUrl, "README.md")}\">Readme</a>";
-            var lastCommitFormatted = problem.LastSolutionsCommit.ToString("dd-MM-yyyy");
 
             var url = string.Format(problemUrlFormat, problem.Name);
             var problemLink = $"<a href=\"{url}\">{problem.DisplayName}</a>";
             if (problem.Featured)
                 problemLink += $" {featuredImageTag}";
 
+            var readmeUrl = $"<a href=\"{Path.Combine(baseSolutionUrl, "README.md")}\">Readme</a>";
+            var solutionsSection = GenerateSolutionsSection(problem, baseSolutionUrl);
+            var lastCommitFormatted = problem.LastSolutionsCommit.ToString("dd-MM-yyyy");
             var contributorDiv = GenerateContributorSection(problem);
 
             source.AppendLine("  <tr>")
@@ -80,8 +80,15 @@ public class GeneratorService(AppSettings settings) {
     private static string GenerateContributorSection(Problem problem) {
         var contributorLinks = problem.Contributors
             .OrderByDescending(contributor => contributor.NumOfCommits)
-            .Select(contributor =>
-                $"<a href=\"{contributor.ProfileUrl}\" title=\"{contributor.NumOfCommits} commits\"><img src=\"{contributor.AvatarUrl}\" alt=\"{contributor.Name}\" style=\"border-radius:100%\" width=\"32px\" height=\"32px\"></a>");
+            .Select(contributor => {
+                var titleValue = contributor.NumOfCommits is null
+                    ? $"{contributor.Name}"
+                    : $"{contributor.NumOfCommits} commits";
+
+                return
+                    $"<a href=\"{contributor.ProfileUrl}\" title=\"{titleValue}\"><img src=\"{contributor.AvatarUrl}\" alt=\"{contributor.Name}\" style=\"border-radius:100%\" width=\"32px\" height=\"32px\"></a>";
+            });
+
         var contributorDiv =
             $"<div style=\"display: flex; flex-direction: row; gap: 2px;\">{string.Join(" ", contributorLinks)}</div>";
         return contributorDiv;
