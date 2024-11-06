@@ -33,9 +33,9 @@ can [send your solution](#contributing) (in any language).
 
 See the complete list in [this page](docs/CompleteList.md).
 
-Number of problems solved: **30**
+Number of problems solved: **31**
 
-Number of solutions: **62**
+Number of solutions: **64**
 
 <table>
   <tr>
@@ -44,6 +44,13 @@ Number of solutions: **62**
     <th>Solutions</th>
     <th>Last commit</th>
     <th>Contributors</th>
+  </tr>
+  <tr>
+    <td><a href="https://leetcode.com/problems/balanced-binary-tree">balanced binary tree</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/balanced-binary-tree/README.md">Readme</a></td>
+    <td><a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/balanced-binary-tree/csharp">csharp</a> - <a href="https://github.com/HamidMolareza/LeetCode/tree/master/Solutions/balanced-binary-tree/txt/README.md">txt</a></td>
+    <td>06-11-2024</td>
+    <td><div style="display: flex; flex-direction: row; gap: 2px;"><a href="https://github.com/HamidMolareza/" title="2 commits"><img src="https://avatars.githubusercontent.com/u/35568753?v=4" alt="HamidMolareza" style="border-radius:100%" width="32px" height="32px"></a></div></td>
   </tr>
   <tr>
     <td><a href="https://leetcode.com/problems/find-customer-referee">find customer referee</a></td>
